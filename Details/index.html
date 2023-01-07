@@ -1,254 +1,780 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Sayan Roy" /><link rel="canonical" href="https://basics.stats.imathlogic.com/Details/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Details - Basic Statistics for Data-Science</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Details";
-        var mkdocs_page_input_path = "Details.md";
-        var mkdocs_page_url = "/Details/";
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="In this page, basic statistical (descriptive and inferential) concepts are covered that can help you to your Data Science journey.">
+      
+      
+        <meta name="author" content="Sayan Roy">
+      
+      
+        <link rel="canonical" href="https://basics.stats.imathlogic.com/Details/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>Statistics - Basic Statistics for Data-Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Basic Statistics for Data-Science
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#important-concepts-for-eda" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">About</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Details</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#index">Index:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#data-types-in-statistics-go-to-top">Data Types in Statistics: Go to top</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#measures-of-central-tendencyestimates-of-location-go-to-top">Measures of Central Tendency/Estimates of Location: Go to top</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mean-go-to-top">Mean: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#trimmed-mean-go-to-top">Trimmed Mean: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#weighted-mean-go-to-top">Weighted Mean: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#median-go-to-top">Median: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mode-go-to-top">Mode: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#expected-value-go-to-top">Expected Value: Go to top</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#measures-of-dispersionvariability-go-to-top">Measures of Dispersion/Variability: Go to top</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mean-absolute-deviation-mad-go-to-top">Mean Absolute Deviation (MAD): Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#variance-standard-deviation-go-to-top">Variance &amp; Standard Deviation: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#median-absolute-variance-go-to-top">Median Absolute Variance: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#range-go-to-top">Range: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#percentile-iqr-go-to-top">Percentile | IQR: Go to top</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#visualization-go-to-top">Visualization: Go to top</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#boxplot-go-to-top">Boxplot: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#histogram-go-to-top">Histogram: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#densitykde-plot-go-to-top">Density/KDE Plot: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#bar-chart-go-to-top">Bar chart: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#scatter-plots-go-to-top">Scatter plots: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hexagonal-binning-plot-go-to-top">Hexagonal Binning Plot: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contour-plot-go-to-top">Contour Plot: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#heat-maps-go-to-top">Heat Maps: Go to top</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#violin-plot-go-to-top">Violin Plot: Go to top</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#correlation-go-to-top">Correlation: Go to top</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#pivot-table-go-to-top">Pivot Table: Go to top</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Basic Statistics for Data-Science" class="md-header__button md-logo" aria-label="Basic Statistics for Data-Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basic Statistics for Data-Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Statistics
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Basic Statistics for Data-Science</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
         
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Details</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <h1 id="eda-approach">EDA Approach:</h1>
-<h2 id="index"><span id="index"><strong>Index:</strong></span></h2>
-<ol>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#data-types-in-statistics-go-to-top">Data Types in Statistics</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#measures-of-central-tendencyestimates-of-location-go-to-top">Measures of Central Tendency</a><ol>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#mean-go-to-top">Mean</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#trimmed-mean-go-to-top">Trimmed Mean</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#weighted-mean-go-to-top">Weighted Mean</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#median-go-to-top">Median</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#mode-go-to-top">Mode</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#expected-value-go-to-top">Expected Value</a></li>
-</ol>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Basic Statistics for Data-Science" class="md-nav__button md-logo" aria-label="Basic Statistics for Data-Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Basic Statistics for Data-Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Statistics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-in-statistics" class="md-nav__link">
+    Data Types in Statistics
+  </a>
+  
 </li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#measures-of-dispersionvariability-go-to-top">Measures of Dispersion</a><ol>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#mean-absolute-deviation-mad-go-to-top">Mean Absolute Deviation (MAD)</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#variance--standard-deviation-go-to-top">Variance &amp; Standard Deviation</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#median-absolute-variance-go-to-top">Mean Absolute Variance</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#range-go-to-top">Range</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#percentile--iqr-go-to-top">Percentile &amp; IQR</a></li>
-</ol>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-central-tendencyestimates-of-location" class="md-nav__link">
+    Measures of Central Tendency/Estimates of Location
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Central Tendency/Estimates of Location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mean" class="md-nav__link">
+    Mean
+  </a>
+  
 </li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#visualization-go-to-top">Visualization</a><ol>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#boxplot-go-to-top">Boxplot</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#histogram-go-to-top">Histogram</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#densitykde-plot-go-to-top">Density/KDE Plot</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#bar-chart-go-to-top">Bar chart</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#scatter-plots-go-to-top">Scatter plot</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#hexagonal-binning-plot-go-to-top">Hexagonal Binning Plot</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#contour-plot-go-to-top">Contour Plot</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#heat-maps-go-to-top">Heat Maps</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#violin-plot-go-to-top">Violin Plot</a></li>
-</ol>
+        
+          <li class="md-nav__item">
+  <a href="#trimmed-mean" class="md-nav__link">
+    Trimmed Mean
+  </a>
+  
 </li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#correlation-go-to-top">Correlation</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#pivot-table-go-to-top">Pivot Table</a></li>
-<li>
-<p><a href="https://github.com/Sayan-Roy-729/Data-Science#some-more-statistical-concepts-go-to-top">Some more Statistical Concepts</a></p>
-<ol>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#random-sampling-go-to-top">Random Sampling</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#statistical-bias-go-to-top">Statistical Bias</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#selection-bias-go-to-top">Selection Bias</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#central-limit-theorem--sampling-distribution-go-to-top">Central Limit Theorem / Sampling Distribution</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#standard-error-go-to-top">Standard Error</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#bootstrapping-go-to-top">Bootstrapping</a></li>
-<li><a href="https://github.com/Sayan-Roy-729/Data-Science#confidence-interval-ci-go-to-top">Confidence Interval (CI)</a></li>
-</ol>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-mean" class="md-nav__link">
+    Weighted Mean
+  </a>
+  
 </li>
-</ol>
+        
+          <li class="md-nav__item">
+  <a href="#median" class="md-nav__link">
+    Median
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-value" class="md-nav__link">
+    Expected Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-dispersionvariability" class="md-nav__link">
+    Measures of Dispersion/Variability
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Dispersion/Variability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mean-absolute-deviation-mad" class="md-nav__link">
+    Mean Absolute Deviation (MAD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-standard-deviation" class="md-nav__link">
+    Variance &amp; Standard Deviation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#median-absolute-variance" class="md-nav__link">
+    Median Absolute Variance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentile-iqr" class="md-nav__link">
+    Percentile | IQR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boxplot" class="md-nav__link">
+    Boxplot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    Histogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#densitykde-plot" class="md-nav__link">
+    Density/KDE Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bar-chart" class="md-nav__link">
+    Bar chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scatter-plots" class="md-nav__link">
+    Scatter plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexagonal-binning-plot" class="md-nav__link">
+    Hexagonal Binning Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contour-plot" class="md-nav__link">
+    Contour Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat-maps" class="md-nav__link">
+    Heat Maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#violin-plot" class="md-nav__link">
+    Violin Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-table" class="md-nav__link">
+    Pivot Table
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-in-statistics" class="md-nav__link">
+    Data Types in Statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-central-tendencyestimates-of-location" class="md-nav__link">
+    Measures of Central Tendency/Estimates of Location
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Central Tendency/Estimates of Location">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mean" class="md-nav__link">
+    Mean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimmed-mean" class="md-nav__link">
+    Trimmed Mean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-mean" class="md-nav__link">
+    Weighted Mean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#median" class="md-nav__link">
+    Median
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-value" class="md-nav__link">
+    Expected Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-dispersionvariability" class="md-nav__link">
+    Measures of Dispersion/Variability
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Dispersion/Variability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mean-absolute-deviation-mad" class="md-nav__link">
+    Mean Absolute Deviation (MAD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-standard-deviation" class="md-nav__link">
+    Variance &amp; Standard Deviation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#median-absolute-variance" class="md-nav__link">
+    Median Absolute Variance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentile-iqr" class="md-nav__link">
+    Percentile | IQR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boxplot" class="md-nav__link">
+    Boxplot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    Histogram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#densitykde-plot" class="md-nav__link">
+    Density/KDE Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bar-chart" class="md-nav__link">
+    Bar chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scatter-plots" class="md-nav__link">
+    Scatter plots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexagonal-binning-plot" class="md-nav__link">
+    Hexagonal Binning Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contour-plot" class="md-nav__link">
+    Contour Plot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat-maps" class="md-nav__link">
+    Heat Maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#violin-plot" class="md-nav__link">
+    Violin Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-table" class="md-nav__link">
+    Pivot Table
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="important-concepts-for-eda">Important Concepts for EDA:</h1>
+<h2 id="data-types-in-statistics"><strong>Data Types in Statistics</strong></h2>
+<p>Generally 2 types of data types we can see in Data-Science.</p>
+<ul>
+<li><strong><code>Numeric</code></strong>: Data that are expressed on a numeric scale.<ul>
+<li><strong>Continuous</strong>: Data that can take on any value in an interval.</li>
+<li><strong>Discrete:</strong> Data that can take on only integer values, such as counts</li>
+</ul>
+</li>
+<li><strong><code>Categorical</code></strong>: Data that can take on only a specofic set of values representing a set of possible categories.<ul>
+<li><strong>Binary</strong>: A special case of categorical data with just two categories of values e.g., 0/1, true/false.</li>
+<li><strong>Ordinal</strong>: Categorical data that has an explicit ordering.</li>
+</ul>
+</li>
+</ul>
 <hr />
-<h2 id="data-types-in-statistics-go-to-top"><strong>Data Types in Statistics:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
-<p>Generally 2 types of data types we can see in Data-Science.
-- <strong><code>Numeric</code></strong>: Data that are expressed on a numeric scale.
-    - <strong>Continuous</strong>: Data that can take on any value in an interval.
-    - <strong>Discrete:</strong> Data that can take on only integer values, such as counts
-- <strong><code>Categorical</code></strong>: Data that can take on only a specofic set of values representing a set of possible categories.
-    - <strong>Binary</strong>: A special case of categorical data with just two categories of values e.g., 0/1, true/false.
-    - <strong>Ordinal</strong>: Categorical data that has an explicit ordering.</p>
-<hr />
-<h2 id="measures-of-central-tendencyestimates-of-location-go-to-top"><strong>Measures of Central Tendency/Estimates of Location:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
-<h3 id="mean-go-to-top"><strong>Mean:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
-<p>$$\large \bar{x} = \frac{\sum_{i=1}^{n}{x_i}}{n}$$</p>
+<h2 id="measures-of-central-tendencyestimates-of-location"><strong>Measures of Central Tendency/Estimates of Location</strong></h2>
+<h3 id="mean"><strong>Mean</strong></h3>
+<p>
+<script type="math/tex; mode=display">\large \bar{x} = \frac{\sum_{i=1}^{n}{x_i}}{n}</script>
+</p>
 <pre><code class="language-python">DataFrame.mean()
 </code></pre>
-<h3 id="trimmed-mean-go-to-top"><strong>Trimmed Mean:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="trimmed-mean"><strong>Trimmed Mean</strong></h3>
 <p>A variation of the mean is a trimmed mean which you calculate by dropping a fixed number of sorted values at each end and then taking an average of the remaining values.</p>
 <p>The formula to compute the trimmed mean with $p$ smallest and largest values omitted is:
-$$\large \bar{x} = \frac{\sum_{i = p+1}^{n-p}{x_i}}{n - 2p}$$</p>
+<script type="math/tex; mode=display">\large \bar{x} = \frac{\sum_{i = p+1}^{n-p}{x_i}}{n - 2p}</script>
+</p>
 <pre><code class="language-python">import scipy.stats as stats
 
 # 0.1 means drop 10% from each end.
 stats.trim_mean(column_name, 0.1)
 </code></pre>
-<h3 id="weighted-mean-go-to-top"><strong>Weighted Mean</strong>: <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
-<p>$$\large \bar{x_w} = \frac{\sum_{i=1}^{n}{w_ix_i}}{\sum_{i=1}^{n}{w_i}}$$</p>
+<h3 id="weighted-mean"><strong>Weighted Mean</strong></h3>
+<p>
+<script type="math/tex; mode=display">\large \bar{x_w} = \frac{\sum_{i=1}^{n}{w_ix_i}}{\sum_{i=1}^{n}{w_i}}</script>
+</p>
 <pre><code class="language-python">import numpy as np
 
 np.average(DataFrame.column, weights=DataFrame.another_column)
 </code></pre>
-<h3 id="median-go-to-top"><strong>Median:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="median"><strong>Median</strong></h3>
 <p>Compared to mean, which uses all the observations, the median depends only on the values in the center of the sorted data. It is also possible to compute the <em>weighted median</em>.</p>
 <pre><code class="language-python">DataFrame.median()
 </code></pre>
 <p>For weighted median, you can use the specialized package <code>wquantiles</code>.</p>
 <pre><code class="language-python">wquantiles.median(DataFrame.column, weights=DataFrame.another_column)
 </code></pre>
-<h3 id="mode-go-to-top"><strong>Mode:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="mode"><strong>Mode</strong></h3>
 <p>The mode is the value - or values in case of a tie - that appears most often in the data. The mode is a simple summary statistics for categorical data, and it is generally not used for numeric data.</p>
-<h3 id="expected-value-go-to-top"><strong>Expected Value:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="expected-value"><strong>Expected Value</strong></h3>
 <p>l data is data in which the categories represent or can be mapped to discrete values on the same scale. A marketer for a new cloud technology, for example, offers two levels of service, one priced at $300/month and another at $50/month. The marketer offers free webinars to generate leads, and the firm figures that 5% of the attendees will sign up for the $300 service, 15% will sign up for the $50 service and rest 80% will not sign up for anything. This data can be summed up, for financial purpose, in a single "<em>expected value</em>," which is a form of weighted mean, in which the weights are probabilities. So, expected values are:</p>
-<p>$\large EV = 0.05 * 300 + 0.15 * 50 + 0.80 * 0 = 22.5$</p>
+<p>
+<script type="math/tex; mode=display">\large EV = 0.05 * 300 + 0.15 * 50 + 0.80 * 0 = 22.5</script>
+</p>
 <p>In that cloud service example, the expected value of a webinar attendee is thus $22.50 per month.</p>
-<h2 id="measures-of-dispersionvariability-go-to-top"><strong>Measures of Dispersion/Variability:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
-<h3 id="mean-absolute-deviation-mad-go-to-top"><strong>Mean Absolute Deviation (MAD):</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
-<p>$$\large MAD = \frac{\sum_{i=1}^{n}|x_i - \bar{x}|}{n}$$</p>
-<h3 id="variance-standard-deviation-go-to-top"><strong>Variance &amp; Standard Deviation:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
-<p>$$\large Variance \ (s^2) = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}$$</p>
-<p>$$\large STD \ (s) = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}$$</p>
+<h2 id="measures-of-dispersionvariability"><strong>Measures of Dispersion/Variability</strong></h2>
+<h3 id="mean-absolute-deviation-mad"><strong>Mean Absolute Deviation (MAD)</strong></h3>
+<p>
+<script type="math/tex; mode=display">\large MAD = \frac{\sum_{i=1}^{n}|x_i - \bar{x}|}{n}</script>
+</p>
+<h3 id="variance-standard-deviation"><strong>Variance &amp; Standard Deviation</strong></h3>
+<p>
+<script type="math/tex; mode=display">\large Variance \ (s^2) = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\large STD \ (s) = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}</script>
+</p>
 <pre><code class="language-python"># STD calculation
 DataFrame.std()
 </code></pre>
-<h3 id="median-absolute-variance-go-to-top"><strong>Median Absolute Variance:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
-<p>$$\large Median \ Absolute \ Variance = Median(|x_1 - m|, |x_2 - m|, ..., |x_n - m|)$$</p>
+<h3 id="median-absolute-variance"><strong>Median Absolute Variance</strong></h3>
+<p>
+<script type="math/tex; mode=display">\large Median \ Absolute \ Variance = Median(|x_1 - m|, |x_2 - m|, ..., |x_n - m|)</script>
+</p>
 <p>where $m$ is the median.</p>
-<h3 id="range-go-to-top"><strong>Range:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="range"><strong>Range</strong></h3>
 <p>The difference between the largest and the smallest numbers. The minimum and maximum values themselves are useful to know and are helpful in identifying outliers. But the <em>range</em> is extremely sensitive to outliers and not very useful as a general measure of dispersion in the data.</p>
-<h3 id="percentile-iqr-go-to-top"><strong>Percentile | IQR:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="percentile-iqr"><strong>Percentile | IQR</strong></h3>
 <p>In a dataset, the $P$ th percentile is a value such that at least $P$ percent of the values take on this value or less and at least $(100-P)$ percent of the values take on this value or more.</p>
 <p>The $median$ is the same thing as the 50th percentile. A common measurement of variability is the difference between the 25th percentile and the 75th percentile, called <strong>Interquartile Range (IQR)</strong>. For very large datasets, calculating exact percentiles can be computationally very expensive since it requires sorting all the data values.</p>
 <pre><code class="language-python"># calculate IQR
 DataFrame[column_name].quantile(0.75) - DataFrame[column_name].quantile(0.25)
 </code></pre>
 <hr />
-<h2 id="visualization-go-to-top"><strong>Visualization:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
-<h3 id="boxplot-go-to-top"><strong>Boxplot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h2 id="visualization"><strong>Visualization</strong></h2>
+<h3 id="boxplot"><strong>Boxplot</strong></h3>
 <pre><code class="language-python">DataFrame[column_name].plot.box()
 </code></pre>
 <p><img src="https://cdn1.byjus.com/wp-content/uploads/2020/10/Box-Plot-and-Whisker-Plot-2.png" alt="BoxPlot of Normal Distribution" width=500 heigh=auto/></p>
@@ -258,25 +784,25 @@ ax.set_xlabel(category_col_1)
 ax.set_ylabel(numeric_col_1)
 </code></pre>
 <p><img src="https://www.itl.nist.gov/div898/handbook/eda/gif/boxplot0.gif" alt="Boxplot with categorical and numerical variables" width=500/></p>
-<h3 id="histogram-go-to-top"><strong>Histogram:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="histogram"><strong>Histogram</strong></h3>
 <pre><code class="language-python">ax = DataFrame[column_name].plot.hist(figsize=(4,4))
 ax.set_xlabel(&quot;Some label based on X-Axis)
 </code></pre>
 <p><img src="https://statistics.laerd.com/statistical-guides/img/uh/laerd-statistics-example-histogram-frequencies-for-age.png" alt="Histogram" width=500 heigh=auto/></p>
-<h3 id="densitykde-plot-go-to-top"><strong>Density/KDE Plot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="densitykde-plot"><strong>Density/KDE Plot</strong></h3>
 <pre><code class="language-python">ax = DataFrame[column_name].plot.hist(density=True)
 DataFrame[column_name].plot.density(ax=ax)
 ax.set_xlabel(&quot;Set some label of X-axis)
 </code></pre>
 <p><img src="https://www.askpython.com/wp-content/uploads/2020/10/Density-plot-with-Histogram-1024x512.jpeg" width=500 alt="Density/KDE Plot"/></p>
-<h3 id="bar-chart-go-to-top"><strong>Bar chart:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="bar-chart"><strong>Bar chart</strong></h3>
 <p>Note that a bar chart resembles a histogram; in a bar chart the x-axis represents different categories of a factor variable, while in a histogram the x-axis represents values of a single variable on a numeric scale. In a histogram, the bars are typically shown touching each other, with gaps indicating values that did not occur in the data. In a bar chart, the bars are shown separate from one another.</p>
 <pre><code class="language-python">ax = DataFrame[column_name].plot.bar(figsize = (4, 4), legend=False)
 ax.set_xlable(&quot;Set some x-axis label&quot;)
 ax.set_ylabel(&quot;Count&quot;)
 </code></pre>
 <p><img src="https://www.tutorialspoint.com/matplotlib/images/matplotlib_bar_plot.jpg" width=500 alt="Bar chart"/></p>
-<h3 id="scatter-plots-go-to-top"><strong>Scatter plots:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="scatter-plots"><strong>Scatter plots</strong></h3>
 <p>The standard way to visualize the relationship between two measured data variables is with a scatter plot. The x-axis represents one variables and the y-axis represents another, each point on the graph is a record.</p>
 <p>Scatter plots are fine when there is a relatively small number of data values. For data sets with hundred of thousands or millions of records, a scatter plot will be too dense to identify the details of the data. </p>
 <pre><code class="language-python">ax = DataFrame.plot.scatter(x=column_name_1, y=column_name_2, figsize=(4, 4), marker='$\u25EF$')
@@ -286,14 +812,14 @@ ax.axhline(0, color=&quot;grey&quot;, lw=1)
 ax.axvline(0, color=&quot;grey&quot;, lw=1)
 </code></pre>
 <p><img src="https://www.tibco.com/sites/tibco/files/media_entity/2022-01/scatter-chart-example.svg" alt="Scatter Plot" width=500/></p>
-<h3 id="hexagonal-binning-plot-go-to-top"><strong>Hexagonal Binning Plot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="hexagonal-binning-plot"><strong>Hexagonal Binning Plot</strong></h3>
 <p>This plot is the solution of the disadvantages of scatter plot. Rather than plotting points, which would appear as a monolithic dark cloud, we can group the records into hexagonal bins and then can plot that hexagons with a color indicating the number of records in that bin.</p>
 <pre><code class="language-python">ax = DataFrame.plot.hexbin(x=column_name_1, y=column_name_2, gridsize=30, sharex=False, figsize=(5, 4))
 ax.set_xlabel(column_name_1)
 ax.set_ylabel(column_name_2)
 </code></pre>
 <p><img src="https://pandas.pydata.org/docs/_images/pandas-DataFrame-plot-hexbin-1.png" alt="Hexagonal Binning Plot" width=500/></p>
-<h3 id="contour-plot-go-to-top"><strong>Contour Plot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="contour-plot"><strong>Contour Plot</strong></h3>
 <p>Another solution of the disadvantages of scatter plot. The contour plot overlaid onto a scatter plot to visualize the relationship between two numeric variables. The contours are essentially a topographical map to two variables; each contour band represents a specific density of points, increasing as one nears a "peak".</p>
 <pre><code class="language-python">import seaborn as sns
 
@@ -302,10 +828,10 @@ ax.set_xlabel(column_name_1)
 ax.set_ylabel(column_name_2)
 </code></pre>
 <p><img src="https://www.wavemetrics.com/sites/www.wavemetrics.com/files/contourlabels2.png" alt="Contour Plot" width=500/></p>
-<h3 id="heat-maps-go-to-top"><strong>Heat Maps:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="heat-maps"><strong>Heat Maps</strong></h3>
 <p>Another solution of the disadvantages of the scatter plot.</p>
 <p><img src="https://www.displayr.com/wp-content/uploads/2018/09/rat-burrough-heatmap-1.png" alt="Heat Map" width=500/></p>
-<h3 id="violin-plot-go-to-top"><strong>Violin Plot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="violin-plot"><strong>Violin Plot</strong></h3>
 <p>A violin plot is an enhancement to the boxplot and plots the density estimate with the density on the y-axis. The density is mirrored and flipped over, and the resulting shape is filled in, creating an image resembling a violin. The advantage of a violin plot is that it can show nuances in the distribution that aren't perceptible in a boxplot. On the other hand, the boxplot more clearly shows the outliers in the data.</p>
 <pre><code class="language-python">import seaborn as sns
 
@@ -315,47 +841,51 @@ ax.set_ylabel(numerical_col_1)
 </code></pre>
 <p><img src="https://miro.medium.com/max/1040/1*TTMOaNG1o4PgQd-e8LurMg.png" width=500 alt="Comparison between Box-Plot and Violin Plot"/></p>
 <hr />
-<h2 id="correlation-go-to-top"><strong>Correlation:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="correlation"><strong>Correlation</strong></h2>
 <p>Variables $X$ and $Y$ (each with measured data) are said to be <em><code>positively correlated</code></em> if high values of $X$ go with high values of $Y and low values of $X$ go to with low values of $Y. If high values of $X go with low values of $Y, and vice versa, the variables are <em><code>negatively correlated</code></em>.</p>
 <ul>
 <li><strong><code>Correlation coefficient</code>:</strong> A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1)</li>
 <li><strong><code>Correlation matrix</code>:</strong> A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.</li>
 </ul>
-<p>$$Pearson's \ correlation \ coefficient \ (r) = \frac{\sum_{i=1
-}^{n}{(x_i - \bar{x})(y_i - \bar{y})}}{(n-1)s_xs_y}$$</p>
+<p>
+<script type="math/tex; mode=display">Pearson's \ correlation \ coefficient \ (r) = \frac{\sum_{i=1
+}^{n}{(x_i - \bar{x})(y_i - \bar{y})}}{(n-1)s_xs_y}</script>
+</p>
 <pre><code class="language-python">import seaborn as sns
 
 sns.heatmap(DataFrame.corr(), vmin=-1, vmax=1, cmap=sns.diverging_palette(20, 220, as_cmap=True))
 </code></pre>
 <p>Like the <code>mean</code> and <code>standard deviation</code>, the correlation coefficient is sensitive to outliers in the data. <code>Spearman's rho</code> and <code>Kendall's tau</code> correlation techniques are based on the rank of the data and these are robust to outliers and can handle certain types of nonlinearities.</p>
 <hr />
-<h2 id="pivot-table-go-to-top"><strong>Pivot Table:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="pivot-table"><strong>Pivot Table</strong></h2>
 <p>Whether the correlation coefficient helps to measure between two numeric columns, pivot table helps to measure between two categorical columns.</p>
 <pre><code class="language-python">crosstab = DataFrame.pivot_table(index=category_col_1, columns=category_col_2, aggfunc=lambda x: len(x), margins=True)
 crosstab
 </code></pre>
-<h1 id="some-more-statistical-concepts-go-to-top"><strong>Some more Statistical Concepts:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h1>
-<h2 id="random-sampling-go-to-top"><strong>Random Sampling</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h1 id="some-more-statistical-concepts"><strong>Some more Statistical Concepts</strong></h1>
+<h2 id="random-sampling"><strong>Random Sampling</strong></h2>
 <p><em>Random Sampling</em> is the process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a <em><code>simple random sample</code></em>. Sampling can be down <strong><code>with replacement</code></strong>, in which observations are put back in the population after each draw for possible future reselection. Or it can be done <strong><code>without replacement</code></strong>, in which case observations once selected are unavailable for future draws.</p>
 <p>In <strong><code>stratified sampling</code></strong>, the population is divided up into <em><code>strata</code></em>, and random samples are taken from each stratum.</p>
-<h2 id="statistical-bias-go-to-top"><strong>Statistical Bias:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="statistical-bias"><strong>Statistical Bias</strong></h2>
 <p>Statistical bias refers to measurement or sampling errors that are <em><code>systematic</code></em> and <em><code>produced by the measurement</code></em> or <em><code>sampling process</code></em>. </p>
 <p>Consider the physical process of a gun shooting at a target. It will not hit the absolute center of the target every time or even much at all. An unbiased process will produce error, but it is random and does not tend strongly in any direction. </p>
 <p>Bias comes in different forms, may be <code>observable</code> or <code>invisible</code>. When a result does suggest bias, it is often an indicator that a statistical or machine learning model has been misspecified or an important variable left out.</p>
-<h2 id="selection-bias-go-to-top"><strong>Selection Bias:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="selection-bias"><strong>Selection Bias</strong></h2>
 <p>Selection bias refers to the practice of selectively choosing data - consciously or unconsciously - in a way that leads to a conclusion that is misleading or ephemeral.</p>
 <p><code>Data snooping</code> is extensive hunting through the data until something interesting emerges. There is a saying among statisticians: "If you torture the data long enough, sooner or later it will confess."</p>
 <p>If you repeatedly run different models and ask different questions with a large data set, you are bound to find something interesting. This is called <code>vast search effect.</code></p>
-<h2 id="central-limit-theorem-sampling-distribution-go-to-top"><strong>Central Limit Theorem / Sampling Distribution:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="central-limit-theorem-sampling-distribution"><strong>Central Limit Theorem / Sampling Distribution</strong></h2>
 <p>The statistics (e.g., mean) drawn from multiple samples will resemble the familiar bell-shaped normal curve, even if the source population is not normally distributed, provided that the sample size is large enough and the departure of the data from normality is not too great.</p>
-<h2 id="standard-error-go-to-top"><strong>Standard Error:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="standard-error"><strong>Standard Error</strong></h2>
 <p>The standard error is a single metric that sums up the variability in the sampling distribution for a statistics.</p>
-<p>$$Standard \ Error \ (SE) = \frac{std}{\sqrt{sample \ size}} = \frac{s}{\sqrt{n}}$$</p>
+<p>
+<script type="math/tex; mode=display">Standard \ Error \ (SE) = \frac{std}{\sqrt{sample \ size}} = \frac{s}{\sqrt{n}}</script>
+</p>
 <p>Consider the following approach to measuring standard error:
 1. Collect a number of brand-new samples from the population.
 2. For each new sample, calculate the statistics (e.g., mean)
 3. Calculate the standard deviation of the statistics computed in step 2; use this as your estimate of standard error.</p>
-<h2 id="bootstrapping-go-to-top"><strong>Bootstrapping:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="bootstrapping"><strong>Bootstrapping</strong></h2>
 <p>One easy and effective way to estimate the sampling distribution of a statistics, or of model parameters is to draw additional <code>samples, with replacement</code> from the sample itself and recalculate the statistics or model for each resample. This procedure is called <strong><code>bootstrap</code></strong>. It does not necessarily involve any assumptions about the data or the sample statistics being normally distributed. </p>
 <p>The algorithm for a bootstrap resampling of the mean, for a sample of size $n$, is as follows:
 1. Draw a sample value, record it and then replace it.
@@ -379,7 +909,7 @@ print(f'original: {DataFrame[column_name].median()}')
 print(f&quot;bias: {results.median() - DataFrame[column_name].median()}&quot;)
 print(f&quot;std. error: {results.std()}&quot;)
 </code></pre>
-<h2 id="confidence-interval-ci-go-to-top"><strong>Confidence Interval (CI):</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
+<h2 id="confidence-interval-ci"><strong>Confidence Interval (CI)</strong></h2>
 <p>Confidence intervals always come with a coverage level, expressed as a (high) percentage, say 90% or 95%. One way to think of a 90% confidence interval is as follows: it is the interval that encloses the central 90% of the bootstrap sampling distribution of a sample statistic. More generally, an $x\%$ confidence interval around a sample estimate should, on average, contain similar sample estimates $x\%$ of the time.</p>
 <p>Given a sample of size $n$, and a sample statistic of interest, the algorithm for a bootstrap confidence interval is as follows:
 1. Draw a random sample of size $n$ with replacement from the data (a resample).
@@ -388,16 +918,20 @@ print(f&quot;std. error: {results.std()}&quot;)
 4. For an $x\%$ confidence interval, trim $[(100-x)/2]\%$ of the $R$ resample results from either end of the distribution.
 5. The trim points are the endpoints of an $x\%$ bootstrap confidence interval.</p>
 <p>The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty).</p>
-<h2 id="normal-distribution-go-to-top"><strong>Normal Distribution:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h2>
-<p>$$\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}{e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}}$$</p>
+<h2 id="normal-distribution"><strong>Normal Distribution</strong></h2>
+<p>
+<script type="math/tex; mode=display">\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}{e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}}</script>
+</p>
 <p>$f(x) = probability density function$</p>
 <p>$\sigma = standard deviation$</p>
 <p>$\mu = mean$</p>
 <p><img src="https://i.stack.imgur.com/jkMDV.png" width=500 alt="Normal Distribution"/></p>
-<h3 id="standardization-z-score-go-to-top"><strong>Standardization / Z-Score</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<h3 id="standardization-z-score"><strong>Standardization / Z-Score</strong></h3>
 <p>To compare the data to a standard normal distribution, you subtract the mean and then divided by the standard deviation. This is called <em>standardization</em> or <em>z-score</em>.</p>
-<p>$$\large Z \ - Score = \frac{x_i - \bar{x}}{\sigma_x}$$</p>
-<h3 id="qq-plot-go-to-top"><strong>QQ-Plot:</strong> <sup><sub><a href="https://github.com/Sayan-Roy-729/Data-Science#index"><strong>Go to top</strong></a></sub></sup></h3>
+<p>
+<script type="math/tex; mode=display">\large Z \ - Score = \frac{x_i - \bar{x}}{\sigma_x}</script>
+</p>
+<h3 id="qq-plot"><strong>QQ-Plot</strong></h3>
 <p>A QQ - Plot is used to visually determine how close a sample specified distribution - in this case, the normal distribution.</p>
 <pre><code class="language-python">import scipy.stats as stats
 
@@ -405,50 +939,53 @@ fig, ax = plt.subplots(figsize=(4, 4))
 norm_sample = stats.norm.rvs(size=100)
 stats.probplot(norm_sample, plot=ax)
 </code></pre>
-<h2 id="long-tailed-distribution"><strong>Long-Tailed Distribution:</strong></h2>
+<h2 id="long-tailed-distribution"><strong>Long-Tailed Distribution</strong></h2>
 <p>Sometimes, the distribution is highly skewed, such as with income data or the distribution can be discrete, as with binominal data. The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.</p>
 <p><img src="https://i.stack.imgur.com/QCGKr.png" alt="Long-Tailed distribution" width=500/></p>
-              
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-  </span>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+    
+  </body>
 </html>
