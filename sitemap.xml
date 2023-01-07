@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://data-science.imathlogic.com/docker%20guide/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://data-science.imathlogic.com/measures%20of%20central%20tendency/</loc>
          <lastmod>2023-01-07</lastmod>
          <changefreq>daily</changefreq>

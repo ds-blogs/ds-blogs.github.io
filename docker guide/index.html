@@ -1,0 +1,778 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="In this page, basic statistical (descriptive and inferential) concepts are covered that can help you to your Data Science journey.">
+      
+      
+        <meta name="author" content="Sayan Roy">
+      
+      
+        <link rel="canonical" href="https://data-science.imathlogic.com/docker%20guide/">
+      
+      
+        <link rel="prev" href="../distributions%20in%20statistics/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>Docker Guide - Data-Science | iMathLogic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data-Science | iMathLogic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Data-Science | iMathLogic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measures%20of%20central%20tendency/" class="md-nav__link">
+        Central Tendency
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measures%20of%20dispersion/" class="md-nav__link">
+        Measures of Dispersion
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization/" class="md-nav__link">
+        Visualization
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sampling/" class="md-nav__link">
+        Data Sampling
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distributions%20in%20statistics/" class="md-nav__link">
+        Distributions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Docker Guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-docker-image-docker-container" class="md-nav__link">
+    What is Docker Image &amp; Docker Container?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-of-docker-some-important-commands" class="md-nav__link">
+    Reference of Docker | Some Important Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference of Docker | Some Important Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-the-version" class="md-nav__link">
+    Check the version:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-pull" class="md-nav__link">
+    docker pull:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-image" class="md-nav__link">
+    docker image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-ps" class="md-nav__link">
+    docker ps:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-run" class="md-nav__link">
+    docker run:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-stop-or-docker-container-stop" class="md-nav__link">
+    docker stop or docker container stop:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container-ls" class="md-nav__link">
+    docker container ls:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container-prune" class="md-nav__link">
+    docker container prune:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-logs" class="md-nav__link">
+    docker logs:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-example" class="md-nav__link">
+    Docker Example:
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Example:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-docker-mongo-express-with-mongodb-docker-compose" class="md-nav__link">
+    Connect docker mongo-express with mongodb | Docker Compose:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask-app-create-docker-image-push-image-to-docker-hub" class="md-nav__link">
+    Flask APP | Create Docker Image | Push Image to Docker Hub:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-docker-image-docker-container" class="md-nav__link">
+    What is Docker Image &amp; Docker Container?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-of-docker-some-important-commands" class="md-nav__link">
+    Reference of Docker | Some Important Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference of Docker | Some Important Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-the-version" class="md-nav__link">
+    Check the version:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-pull" class="md-nav__link">
+    docker pull:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-image" class="md-nav__link">
+    docker image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-ps" class="md-nav__link">
+    docker ps:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-run" class="md-nav__link">
+    docker run:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-stop-or-docker-container-stop" class="md-nav__link">
+    docker stop or docker container stop:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container-ls" class="md-nav__link">
+    docker container ls:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-container-prune" class="md-nav__link">
+    docker container prune:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-logs" class="md-nav__link">
+    docker logs:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-example" class="md-nav__link">
+    Docker Example:
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Example:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-docker-mongo-express-with-mongodb-docker-compose" class="md-nav__link">
+    Connect docker mongo-express with mongodb | Docker Compose:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask-app-create-docker-image-push-image-to-docker-hub" class="md-nav__link">
+    Flask APP | Create Docker Image | Push Image to Docker Hub:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="docker-guide"><a href="https://docs.docker.com">Docker Guide</a></h1>
+<h2 id="what-is-docker-image-docker-container">What is Docker Image &amp; Docker Container?</h2>
+<p>Docker Image is an executable package of software that includes everything needed to run an application. This image informs how a container should instantiate, determining which software components will run and how. Docker Container is a virtual environment that bundles application code with all the dependencies required to run the application. The application runs quickly and reliably from one computing environment to another. One Docker Container only can hold one Docker Image.</p>
+<p>You can find the images from <a href="https://hub.docker.com/search">Docker Hub</a>.</p>
+<h2 id="reference-of-docker-some-important-commands"><a href="https://docs.docker.com/reference">Reference of Docker | Some Important Commands</a></h2>
+<h3 id="check-the-version"><a href="https://docs.docker.com/engine/reference/commandline/version">Check the version</a>:</h3>
+<p>There are 2 commands that can help to check the docker version</p>
+<pre><code class="language-bash">docker version
+</code></pre>
+<p>or</p>
+<pre><code class="language-bash">docker -v
+</code></pre>
+<h3 id="docker-pull"><a href="https://docs.docker.com/engine/reference/commandline/pull"><code>docker pull</code></a>:</h3>
+<p>Pull an image or a repository from a registry/docker hub. Like to use <a href="https://hub.docker.com/_/postgres">postgres</a>, you have to pull that image first by the below command:</p>
+<pre><code class="language-bash">docker pull postgres
+</code></pre>
+<p>When you don't mention the tag, this command will pull the latest image. If you want to pull postgres image version 14, then the command will be</p>
+<pre><code class="language-bash">docker pull postgres:14
+</code></pre>
+<p><em>Note: <code>:14</code> is called <code>tag</code>.</em></p>
+<h3 id="docker-image"><a href="https://docs.docker.com/engine/reference/commandline/image"><code>docker image</code></a>:</h3>
+<ul>
+<li>Using this command, you can see list of images are there in your local machine. This command gives you some information about the docker images.</li>
+</ul>
+<pre><code class="language-bash">docker image ls
+</code></pre>
+<h3 id="docker-ps"><a href="https://docs.docker.com/engine/reference/commandline/ps"><code>docker ps</code></a>:</h3>
+<p>Same as <code>docker image</code> command, this command helps to work with containers. For example, to list down all the containers of your local machine, this below command is used.</p>
+<pre><code class="language-bash">docker ps
+</code></pre>
+<h3 id="docker-run"><a href="https://docs.docker.com/engine/reference/commandline/run"><code>docker run</code></a>:</h3>
+<p>One of the most used command in docker family. It helps to run the image that you have pulled or have created to your local machine. E.g.,</p>
+<pre><code class="language-bash">docker run postgres
+</code></pre>
+<p>or</p>
+<pre><code class="language-bash">docker run postgres:13.8
+</code></pre>
+<p>The above command will run the <code>latest postgres image</code>. <em>postgres</em> is the image name. If you want to run a specific version of the image, you have to specify as so called <em><code>tag</code></em>.</p>
+<p><strong>Important options:</strong>
+- <strong><code>-it</code></strong>: This instructs docker to allocate a pseudo.TTY connected to the container's stdin; creating an interactive <em>bash</em> shell in the container.
+- <strong><code>-e ENVIRONMENT_VAR=VALUE</code></strong>: Some images need environment variables which help to run the image properly. E.g., to run postgres properly, you have to set password by <code>POSTGRES_PASSWORD=mysecretpassword</code>.
+- <strong><code>-d</code></strong>: Detach mode. When you run the image, it keeps your terminal busy. You can enter or command any other command or have to keep open the terminal to run the image continuously. If you pass this option, then the terminal will be detached and you can work with it.
+- <strong><code>--name some-name</code></strong>: If you don't specify this option, docker comes up a name on its own and sometimes it is confusing. For that, you can name the container. You can't name same twice or without deleting the previous container.
+- <strong><code>-p host_port:container_port</code></strong>: Some docker image(s) you run together. But it is possible that the port is same and that can conflict to your application. For that, you can open a port (host_port) to your local machine that will communicate with the container_port. Very important option. To know which port the container is using, you can use <code>docker ps</code> command. This concept is known as <em><code>port mapping</code></em>.
+- - <strong><code>--net network-name</code></strong>: Connect the container to a network. This can help to connect other containers with this containers easily. Otherwise different networks can't connect each other.</p>
+<h3 id="docker-stop-or-docker-container-stop"><a href="https://docs.docker.com/engine/reference/commandline/stop"><code>docker stop</code></a> or <a href="https://docs.docker.com/engine/reference/commandline/container_stop"><code>docker container stop</code></a>:</h3>
+<p>Stop one or more running containers.</p>
+<pre><code class="language-bash">docker stop container_name
+or
+docker stop container_id
+or
+docker container stop container_name
+or
+docker container stop container_id
+</code></pre>
+<h3 id="docker-container-ls"><a href="https://docs.docker.com/engine/reference/commandline/container_ls"><code>docker container ls</code></a>:</h3>
+<p>An alternative of the command <code>docker ps</code> to list out all the active docker containers.</p>
+<pre><code class="language-bash">docker container ls
+</code></pre>
+<p>If you want all the containers whatever it is running or not, command this:</p>
+<pre><code class="language-bash">docker container ls -a
+</code></pre>
+<h3 id="docker-container-prune"><a href="https://docs.docker.com/engine/reference/commandline/container_prune/"><code>docker container prune</code></a>:</h3>
+<p>Remove all the stopped containers from your local machine. This is a very <strong>dangerous command.</strong> You have to be very careful when you are using it. Though it does remove the stopped containers but does not remove the volumes associated with the containers.</p>
+<pre><code class="language-bash">docker container prune
+</code></pre>
+<h3 id="docker-logs"><a href="https://docs.docker.com/engine/reference/commandline/logs"><code>docker logs</code></a>:</h3>
+<p>You can see the logs of the containers. It helps to get inside what is executing in containers.</p>
+<pre><code class="language-bash">docker logs container_name
+or
+docker logs container_id
+</code></pre>
+<h2 id="docker-example">Docker Example:</h2>
+<h3 id="connect-docker-mongo-express-with-mongodb-docker-compose">Connect docker <a href="https://hub.docker.com/_/mongo-express">mongo-express</a> with <a href="https://hub.docker.com/_/mongo">mongodb</a> | <a href="https://docs.docker.com/compose/reference">Docker Compose</a>:</h3>
+<p><a href="https://hub.docker.com/_/mongo">MongoDB</a> is the database and the <a href="https://hub.docker.com/_/mongo-express">MongoDB-Express</a> is the Web-based MongoDB admin interface, written with Node.js and express. So, we will start the container first of the MongoDB and then also start the MongoDB-Express container by connecting with the MongoDB network.</p>
+<p>Create a network that both containers will connect together.</p>
+<pre><code class="language-bash">docker network create mongo-network
+</code></pre>
+<p>Start the MongoDB container:</p>
+<pre><code class="language-bash">docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network -d mongo
+</code></pre>
+<p>Now start the MongoDB-Express container:</p>
+<pre><code class="language-bash">docker run --network mongo-network -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -p 8081:8081 -d --name mongo-express mongo-express
+</code></pre>
+<p>Now the web app of mongodb-express container is running and you can visit by using the browser. The url is http://localhost:8081. You can visit it. If we stop the <code>mongodb</code> container that we have created, it will also stop the <code>mongo-express</code> container because <code>mongodb</code> container is the dependency of the <code>mongo-express</code> container.</p>
+<p>So, we have wrote lots of long commands to do this. This can cause issue if you have done a small spelling mistake. To solve this issue, <a href="https://docs.docker.com/compose/reference"><code>docker compose</code></a> come out. For this you can create a yml file. The file name can be anything. For our case, we can name it as <em>docker-compose.yml</em>.</p>
+<pre><code class="language-yml">version: '3'
+services:
+    mongodb:
+        image: mongo
+        ports:
+            - &quot;27017:27017&quot;
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=password
+        volumes:
+            - mymongo-data:/data/db
+    mongo-express:
+        image: mongo-express
+        restart: always
+        ports:
+            - &quot;8081:8081&quot;
+        environment:
+            - ME_CONFIG_MONGODB_SERVER=mongodb
+            - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+            - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+volumes:
+    mymongo-data:
+        driver: local
+</code></pre>
+<p>After creating the compose yml file, you can run the file by the following command:</p>
+<pre><code class="language-bash">docker-compose -f docker-compose.yml up
+</code></pre>
+<p>The best thing with docker compose is that it will create a network by-default and will put all the containers into it. We don't have to specify separately in the docker compose file. Check out the <code>mongodb</code> container. One option is <code>volumes</code>. That is different with the lowers <code>volumes</code> settings. The value of<code>volumes</code> of <code>mongodb</code> container should be default value of the mongo image. That can be different with MySQL or any other image. For that, you have to look to the documentation of the images. By using the <code>volumes</code>, you can detach and attach the volume(s) with the container according to the requirements.</p>
+<p>To stop this compose, you can run the command to a another terminal. This will also remove the containers from your local machine automatically. You don't have to do it manually.</p>
+<pre><code class="language-bash">docker-compose -f docker-compose.yml down
+</code></pre>
+<h3 id="flask-app-create-docker-image-push-image-to-docker-hub">Flask APP | Create Docker Image | Push Image to Docker Hub:</h3>
+<p>To create an docker image, you have to create a file named <code>Dockerfile</code> inside your root project directory. According to the demo-flask app, add the below commands to the <code>Dockerfile</code>.</p>
+<pre><code class="language-Dockerfile"># define the base image
+FROM python:3-alpine3.15
+# define the working directory
+WORKDIR /app
+# copy everything and move those to the directory
+COPY . /app
+# install the required python packages using pip
+RUN pip install -r requirements.txt
+# expose the port in which this application will run.
+# This is defined to the python flask file.
+EXPOSE 3000
+# Now start the application, the entry point of your app
+CMD python ./index.py
+</code></pre>
+<p>Now to build the image of your flask app, you can run the below command. <code>sayanroy7</code> is the username of mine (to get your username, you have to create an account to <a href="https://hub.docker.com">docker hub</a>). <code>flask-docker-demo</code> is the image of the image that you are giving. <code>:0.0.1.RELEASE</code> is the <code>flag</code> of this image.</p>
+<pre><code class="language-bash">docker build -t sayanroy7/flask-docker-demo:0.0.1.RELEASE .
+</code></pre>
+<p>After building the image, you can see it to your Docker Desktop app. Before pushing to the hub, check that is it working fine or not. For that, run the simple command:</p>
+<pre><code class="language-bash">docker container run -d -p 3000:3000 --name flask-docker-demo sayanroy7/flask-docker-demo:0.0.1.RELEASE
+</code></pre>
+<p>If you go to the browser and hit http://localhost:3000, you should get the result as</p>
+<pre><code class="language-bash">{&quot;message&quot;:&quot;Hey there Python&quot;}
+</code></pre>
+<p>If the image is working fine, then push the image to the Docker Hub by the command. If you already signed in to your Docker Desktop, then the image will be uploaded smoothly otherwise it will prompt for the authentications.</p>
+<pre><code class="language-bash">docker push sayanroy7/flask-docker-demo:0.0.1.RELEASE 
+</code></pre>
+<p>And in your Docker Hub, you can see the image under the <em>Repositories</em> tab!! </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+    
+  </body>
+</html>
