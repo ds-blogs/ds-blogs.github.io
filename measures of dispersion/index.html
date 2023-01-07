@@ -12,25 +12,27 @@
         <meta name="author" content="Sayan Roy">
       
       
-        <link rel="canonical" href="https://data-science.imathlogic.com/">
+        <link rel="canonical" href="https://data-science.imathlogic.com/measures%20of%20dispersion/">
       
       
+        <link rel="prev" href="../measures%20of%20central%20tendency/">
       
-        <link rel="next" href="measures%20of%20central%20tendency/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../visualization/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Data-Science | iMathLogic</title>
+        <title>Measures of Dispersion - Data-Science | iMathLogic</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f56500e0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-data-science-hub" class="md-skip">
+        <a href="#measures-of-dispersion-or-variability" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href=".." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Measures of Dispersion
             
           </span>
         </div>
@@ -171,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href=".." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -181,6 +183,36 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measures%20of%20central%20tendency/" class="md-nav__link">
+        Central Tendency
+      </a>
+    </li>
+  
+
     
       
       
@@ -200,12 +232,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          About
+          Measures of Dispersion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        About
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Measures of Dispersion
       </a>
       
         
@@ -224,8 +256,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#important-pages" class="md-nav__link">
-    Important Pages
+  <a href="#mean-absolute-deviation-mad" class="md-nav__link">
+    Mean Absolute Deviation (MAD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance-standard-deviation" class="md-nav__link">
+    Variance &amp; Standard Deviation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-absolute-variance" class="md-nav__link">
+    Median Absolute Variance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#percentile-iqr" class="md-nav__link">
+    Percentile | IQR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-table" class="md-nav__link">
+    Pivot Table
   </a>
   
 </li>
@@ -246,37 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="measures%20of%20central%20tendency/" class="md-nav__link">
-        Central Tendency
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="measures%20of%20dispersion/" class="md-nav__link">
-        Measures of Dispersion
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="visualization/" class="md-nav__link">
+      <a href="../visualization/" class="md-nav__link">
         Visualization
       </a>
     </li>
@@ -291,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sampling/" class="md-nav__link">
+      <a href="../sampling/" class="md-nav__link">
         Data Sampling
       </a>
     </li>
@@ -306,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributions%20in%20statistics/" class="md-nav__link">
+      <a href="../distributions%20in%20statistics/" class="md-nav__link">
         Distributions
       </a>
     </li>
@@ -340,8 +384,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#important-pages" class="md-nav__link">
-    Important Pages
+  <a href="#mean-absolute-deviation-mad" class="md-nav__link">
+    Mean Absolute Deviation (MAD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance-standard-deviation" class="md-nav__link">
+    Variance &amp; Standard Deviation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-absolute-variance" class="md-nav__link">
+    Median Absolute Variance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#percentile-iqr" class="md-nav__link">
+    Percentile | IQR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pivot-table" class="md-nav__link">
+    Pivot Table
   </a>
   
 </li>
@@ -362,12 +448,56 @@
 
 
 
-<h1 id="welcome-to-data-science-hub">Welcome to Data Science Hub</h1>
-<p>Myself Sayan Roy and I am incoming <strong>Data Scientist</strong> at <a href="https://celebaltech.com">Celebal Technologies</a> which is a service based company. </p>
-<h2 id="important-pages">Important Pages</h2>
+<h1 id="measures-of-dispersion-or-variability"><strong>Measures of Dispersion or Variability</strong></h1>
+<h2 id="mean-absolute-deviation-mad"><strong>Mean Absolute Deviation (MAD)</strong></h2>
+<p>
+<script type="math/tex; mode=display">\large MAD = \frac{\sum_{i=1}^{n}|x_i - \bar{x}|}{n}</script>
+</p>
+<h2 id="variance-standard-deviation"><strong>Variance &amp; Standard Deviation</strong></h2>
+<p>
+<script type="math/tex; mode=display">\large Variance \ (s^2) = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\large STD \ (s) = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}</script>
+</p>
+<pre><code class="language-python"># STD calculation
+DataFrame.std()
+</code></pre>
+<h2 id="median-absolute-variance"><strong>Median Absolute Variance</strong></h2>
+<p>
+<script type="math/tex; mode=display">\large Median \ Absolute \ Variance = Median(|x_1 - m|, |x_2 - m|, ..., |x_n - m|)</script>
+</p>
+<p>where $m$ is the median.</p>
+<h2 id="range"><strong>Range</strong></h2>
+<p>The difference between the largest and the smallest numbers. The minimum and maximum values themselves are useful to know and are helpful in identifying outliers. But the <em>range</em> is extremely sensitive to outliers and not very useful as a general measure of dispersion in the data.</p>
+<h2 id="percentile-iqr"><strong>Percentile | IQR</strong></h2>
+<p>In a dataset, the $P$ th percentile is a value such that at least $P$ percent of the values take on this value or less and at least $(100-P)$ percent of the values take on this value or more.</p>
+<p>The $median$ is the same thing as the 50th percentile. A common measurement of variability is the difference between the 25th percentile and the 75th percentile, called <strong>Interquartile Range (IQR)</strong>. For very large datasets, calculating exact percentiles can be computationally very expensive since it requires sorting all the data values.</p>
+<pre><code class="language-python"># calculate IQR
+DataFrame[column_name].quantile(0.75) - DataFrame[column_name].quantile(0.25)
+</code></pre>
+<hr />
+<h2 id="correlation"><strong>Correlation</strong></h2>
+<p>Variables $X$ and $Y$ (each with measured data) are said to be <em><code>positively correlated</code></em> if high values of $X$ go with high values of $Y and low values of $X$ go to with low values of $Y. If high values of $X go with low values of $Y, and vice versa, the variables are <em><code>negatively correlated</code></em>.</p>
 <ul>
-<li><a href=""><code>Basic Statistics</code></a> </li>
+<li><strong><code>Correlation coefficient</code>:</strong> A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1)</li>
+<li><strong><code>Correlation matrix</code>:</strong> A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.</li>
 </ul>
+<p>
+<script type="math/tex; mode=display">Pearson's \ correlation \ coefficient \ (r) = \frac{\sum_{i=1
+}^{n}{(x_i - \bar{x})(y_i - \bar{y})}}{(n-1)s_xs_y}</script>
+</p>
+<pre><code class="language-python">import seaborn as sns
+
+sns.heatmap(DataFrame.corr(), vmin=-1, vmax=1, cmap=sns.diverging_palette(20, 220, as_cmap=True))
+</code></pre>
+<p>Like the <code>mean</code> and <code>standard deviation</code>, the correlation coefficient is sensitive to outliers in the data. <code>Spearman's rho</code> and <code>Kendall's tau</code> correlation techniques are based on the rank of the data and these are robust to outliers and can handle certain types of nonlinearities.</p>
+<hr />
+<h2 id="pivot-table"><strong>Pivot Table</strong></h2>
+<p>Whether the correlation coefficient helps to measure between two numeric columns, pivot table helps to measure between two categorical columns.</p>
+<pre><code class="language-python">crosstab = DataFrame.pivot_table(index=category_col_1, columns=category_col_2, aggfunc=lambda x: len(x), margins=True)
+crosstab
+</code></pre>
 
 
 
@@ -405,10 +535,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.5cf534bf.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
       

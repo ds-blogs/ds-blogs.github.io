@@ -12,21 +12,25 @@
         <meta name="author" content="Sayan Roy">
       
       
+        <link rel="canonical" href="https://data-science.imathlogic.com/distributions%20in%20statistics/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="prev" href="../sampling/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Data-Science | iMathLogic</title>
+        <title>Distributions - Data-Science | iMathLogic</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.f56500e0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#distributions-in-statistics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href=".." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Distributions
             
           </span>
         </div>
@@ -162,7 +171,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href=".." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -181,7 +190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         About
       </a>
     </li>
@@ -196,7 +205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/measures%20of%20central%20tendency/" class="md-nav__link">
+      <a href="../measures%20of%20central%20tendency/" class="md-nav__link">
         Central Tendency
       </a>
     </li>
@@ -211,7 +220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/measures%20of%20dispersion/" class="md-nav__link">
+      <a href="../measures%20of%20dispersion/" class="md-nav__link">
         Measures of Dispersion
       </a>
     </li>
@@ -226,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/visualization/" class="md-nav__link">
+      <a href="../visualization/" class="md-nav__link">
         Visualization
       </a>
     </li>
@@ -241,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sampling/" class="md-nav__link">
+      <a href="../sampling/" class="md-nav__link">
         Data Sampling
       </a>
     </li>
@@ -254,11 +263,79 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/distributions%20in%20statistics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Distributions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Distributions
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normal-distribution" class="md-nav__link">
+    Normal Distribution
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standardization-z-score" class="md-nav__link">
+    Standardization / Z-Score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qq-plot" class="md-nav__link">
+    QQ-Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-tailed-distribution" class="md-nav__link">
+    Long-Tailed Distribution
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -280,6 +357,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normal-distribution" class="md-nav__link">
+    Normal Distribution
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standardization-z-score" class="md-nav__link">
+    Standardization / Z-Score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qq-plot" class="md-nav__link">
+    QQ-Plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-tailed-distribution" class="md-nav__link">
+    Long-Tailed Distribution
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -291,8 +412,41 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="distributions-in-statistics">Distributions in Statistics:</h1>
+<h2 id="normal-distribution"><strong>Normal Distribution</strong></h2>
+<p>
+<script type="math/tex; mode=display">\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}{e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}}</script>
+</p>
+<p>$f(x) = probability density function$</p>
+<p>$\sigma = standard deviation$</p>
+<p>$\mu = mean$</p>
+<p><img src="https://i.stack.imgur.com/jkMDV.png" width=500 alt="Normal Distribution"/></p>
+<h3 id="standardization-z-score"><strong>Standardization / Z-Score</strong></h3>
+<p>To compare the data to a standard normal distribution, you subtract the mean and then divided by the standard deviation. This is called <em>standardization</em> or <em>z-score</em>.</p>
+<p>
+<script type="math/tex; mode=display">\large Z \ - Score = \frac{x_i - \bar{x}}{\sigma_x}</script>
+</p>
+<h3 id="qq-plot"><strong>QQ-Plot</strong></h3>
+<p>A QQ - Plot is used to visually determine how close a sample specified distribution - in this case, the normal distribution.</p>
+<pre><code class="language-python">import scipy.stats as stats
+
+fig, ax = plt.subplots(figsize=(4, 4))
+norm_sample = stats.norm.rvs(size=100)
+stats.probplot(norm_sample, plot=ax)
+</code></pre>
+<h2 id="long-tailed-distribution"><strong>Long-Tailed Distribution</strong></h2>
+<p>Sometimes, the distribution is highly skewed, such as with income data or the distribution can be discrete, as with binominal data. The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.</p>
+<p><img src="https://i.stack.imgur.com/QCGKr.png" alt="Long-Tailed distribution" width=500/></p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -324,10 +478,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "content.code.annotate"], "search": "/assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.5cf534bf.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
       

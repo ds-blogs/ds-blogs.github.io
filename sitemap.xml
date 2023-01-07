@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://basics.stats.imathlogic.com/</loc>
+         <loc>https://data-science.imathlogic.com/</loc>
          <lastmod>2023-01-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://basics.stats.imathlogic.com/Details/</loc>
+         <loc>https://data-science.imathlogic.com/distributions%20in%20statistics/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/measures%20of%20central%20tendency/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/measures%20of%20dispersion/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/sampling/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/visualization/</loc>
          <lastmod>2023-01-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
