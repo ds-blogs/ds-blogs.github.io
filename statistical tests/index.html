@@ -12,20 +12,18 @@
         <meta name="author" content="Sayan Roy">
       
       
-        <link rel="canonical" href="https://data-science.imathlogic.com/distributions%20in%20statistics/">
+        <link rel="canonical" href="https://data-science.imathlogic.com/statistical%20tests/">
       
       
-        <link rel="prev" href="../sampling/">
+        <link rel="prev" href="../docker%20guide/">
       
-      
-        <link rel="next" href="../docker%20guide/">
       
       <link rel="icon" href="../assets/logo-4.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Distributions - Data-Science | iMathLogic</title>
+        <title>Statistical Testing - Data-Science | iMathLogic</title>
       
     
     
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#distributions-in-statistics" class="md-skip">
+        <a href="#statistical-tests" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Distributions
+              Statistical Testing
             
           </span>
         </div>
@@ -289,79 +287,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Distributions
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../distributions%20in%20statistics/" class="md-nav__link">
         Distributions
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#normal-distribution" class="md-nav__link">
-    Normal Distribution
-  </a>
-  
-    <nav class="md-nav" aria-label="Normal Distribution">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standardization-z-score" class="md-nav__link">
-    Standardization / Z-Score
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#qq-plot" class="md-nav__link">
-    QQ-Plot
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#long-tailed-distribution" class="md-nav__link">
-    Long-Tailed Distribution
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -387,11 +317,100 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../statistical%20tests/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Statistical Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Statistical Testing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ab-testing" class="md-nav__link">
+    A/b Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="A/b Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-have-a-control-group" class="md-nav__link">
+    Why have a Control Group?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-just-ab-why-not-c-d" class="md-nav__link">
+    Why just A/B? Why Not C, D?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypothesis-tests" class="md-nav__link">
+    Hypothesis Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-alternative-hypothesis" class="md-nav__link">
+    Null &amp; Alternative Hypothesis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-way-vs-two-way-hypothesis-tests" class="md-nav__link">
+    One-Way vs Two-Way Hypothesis Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permutation-test" class="md-nav__link">
+    Permutation Test
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -423,23 +442,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#normal-distribution" class="md-nav__link">
-    Normal Distribution
+  <a href="#ab-testing" class="md-nav__link">
+    A/b Testing
   </a>
   
-    <nav class="md-nav" aria-label="Normal Distribution">
+    <nav class="md-nav" aria-label="A/b Testing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standardization-z-score" class="md-nav__link">
-    Standardization / Z-Score
+  <a href="#why-have-a-control-group" class="md-nav__link">
+    Why have a Control Group?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#qq-plot" class="md-nav__link">
-    QQ-Plot
+  <a href="#why-just-ab-why-not-c-d" class="md-nav__link">
+    Why just A/B? Why Not C, D?
   </a>
   
 </li>
@@ -450,8 +469,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#long-tailed-distribution" class="md-nav__link">
-    Long-Tailed Distribution
+  <a href="#hypothesis-tests" class="md-nav__link">
+    Hypothesis Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-alternative-hypothesis" class="md-nav__link">
+    Null &amp; Alternative Hypothesis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-way-vs-two-way-hypothesis-tests" class="md-nav__link">
+    One-Way vs Two-Way Hypothesis Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permutation-test" class="md-nav__link">
+    Permutation Test
   </a>
   
 </li>
@@ -472,27 +512,83 @@
 
 
 
-<h1 id="distributions-in-statistics">Distributions in Statistics:</h1>
-<h2 id="normal-distribution"><strong>Normal Distribution</strong></h2>
-<div class="arithmatex">\[\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}{e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}}\]</div>
-<p><span class="arithmatex">\(f(x) = probability density function\)</span></p>
-<p><span class="arithmatex">\(\sigma = standard deviation\)</span></p>
-<p><span class="arithmatex">\(\mu = mean\)</span></p>
-<p><img src="https://i.stack.imgur.com/jkMDV.png" width=500 alt="Normal Distribution"/></p>
-<h3 id="standardization-z-score"><strong>Standardization / Z-Score</strong></h3>
-<p>To compare the data to a standard normal distribution, you subtract the mean and then divided by the standard deviation. This is called <em>standardization</em> or <em>z-score</em>.</p>
-<div class="arithmatex">\[\large Z \ - Score = \frac{x_i - \bar{x}}{\sigma_x}\]</div>
-<h3 id="qq-plot"><strong>QQ-Plot</strong></h3>
-<p>A QQ - Plot is used to visually determine how close a sample specified distribution - in this case, the normal distribution.</p>
-<pre><code class="language-python">import scipy.stats as stats
-
-fig, ax = plt.subplots(figsize=(4, 4))
-norm_sample = stats.norm.rvs(size=100)
-stats.probplot(norm_sample, plot=ax)
-</code></pre>
-<h2 id="long-tailed-distribution"><strong>Long-Tailed Distribution</strong></h2>
-<p>Sometimes, the distribution is highly skewed, such as with income data or the distribution can be discrete, as with binominal data. The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.</p>
-<p><img src="https://i.stack.imgur.com/QCGKr.png" alt="Long-Tailed distribution" width=500/></p>
+<h1 id="statistical-tests"><strong>Statistical Tests</strong></h1>
+<h2 id="ab-testing"><strong>A/b Testing</strong></h2>
+<p>An A/B test is an experiment with two groups to establish which of two treatments, products, procedures or the like is superior. Often one of the two treatments is the standard existing treatment or no treatment. If a standard (or no) treatment is used, it is called the <code>control</code>. A typical hypothesis is that a new treatment is better than the control. Some examples of A/B testing include:
+- Testing two soil treatments to determine which produces better seed germination.
+- Testing two therapies to determine which suppresses cancer more effectively.
+- Testing two prices to determine which yields more net profit.
+- Testing two web headlines to determine which produces more clicks.
+- Testing two web ads to determine which generates more conversions.</p>
+<p>You also need to pay attention to the <code>test statistic</code> or <code>metric</code> you use to compare group A to the group B. Perhaps the most common metric in Data Science is a binary variable: click or no-click, buy or don't buy etc. An example can be:</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Outcome</strong></th>
+<th align="center"><strong>Price A</strong></th>
+<th align="center"><strong>Price B</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Conversion</td>
+<td align="center">200</td>
+<td align="center">182</td>
+</tr>
+<tr>
+<td align="center">No conversion</td>
+<td align="center">23_539</td>
+<td align="center">22_406</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>If the metric is a continuous variable (purchase amount, profit etc) or a count (e.g., days in hospital, pages visited), the result might be displayed differently. If one were interested not in conversion but in revenue per page view, the results of the price test might look like (this below in typical default software output):</p>
+<blockquote>
+<p><em>Revenue/page view with price A: mean = 3.87, SD = 51.10</em></p>
+<p><em>Revenue/page view with price B: mean = 4.11, SD = 62.98</em></p>
+</blockquote>
+<h3 id="why-have-a-control-group">Why have a Control Group?</h3>
+<p>Why not skip the control group and just run an experiment applying the treatment of interest to only one group, and compare to prior experience?</p>
+<p>Without a control group, there is no assurance that "all other things are equal" and that any difference is really due to the treatment (or to chance). When you have a control group, it is subject to the same conditions (except for the treatment of interest) as the treatment group. If you simply make a comparison to "baseline" or prior experience, other factors, besides the treatment, might differ.</p>
+<h3 id="why-just-ab-why-not-c-d">Why just A/B? Why Not C, D?</h3>
+<p>A/B tests are popular in the marketing and e-commerce worlds, but are far from the only type of statistical experiment. Additional treatments can be included. Subjects might have repeated measurements taken. Pharmaceutical trials where subjects are scarce, expensive and acquired over time are sometimes designed with multiple opportunities to stop the experiment and reach a conclusion.</p>
+<h2 id="hypothesis-tests"><strong>Hypothesis Tests</strong></h2>
+<p>An A/B test is typically constructed with a hypothesis in mind. For example, the hypothesis might be that price B produces higher profit. Why do we need a hypothesis? Why not just look at the outcome of the experiment and go with whichever treatment does better? The answer lies in the tendency of the human mind to underestimate the scope of natural random behavior. One manifestation of this is the failure to anticipate extreme events, or so-called "<code>black swans</code>". Another manifestation is the tendency to misinterpret random events as having patterns of some significance. Statistical hypothesis testing was invented as a way to protect researchers from being fooled by random chances.</p>
+<p>In a properly designed A/B test, you collect data on treatments A and B in such a way that any observed difference between A and B must be due to either:
+- Random chance in assignment of subjects
+- A true difference between A and B</p>
+<p>A statistical hypothesis test is further analysis of an A/B test, or any randomized experiment, to assess whether random chance is a reasonable explanation for the observed difference between groups A and B.</p>
+<h2 id="null-alternative-hypothesis"><strong>Null &amp; Alternative Hypothesis</strong></h2>
+<p>Hypothesis tests use the following logic: "Given the human tendency to react to unusual but random behavior and interpret it as something meaningful and real, in our experiments we will require proof that the difference between groups is more extreme than what chance reasonably produce." This involves a baseline assumption that the treatments are equivalent and any difference between the groups is due to chance. This baseline assumption is termed the <code>null hypothesis</code> <span class="arithmatex">\((H_0)\)</span>. Our hope, then, is that we can in fact prove the null hypothesis <code>wrong</code> and show that the out-comes for groups A and B are more different than what chance might produce.</p>
+<p>Hypothesis test by their nature involve just a null hypothesis but also an offsetting <code>alternative hypothesis</code> <span class="arithmatex">\((H_A)\)</span>. Here are some examples:</p>
+<ul>
+<li>Null = "no difference between the means of group A and group B"; alternative = "A is different from B" (could be bigger or smaller)</li>
+<li>Null = "A &lt;= B"; alternative = "A &gt; B"</li>
+<li>Null ="B is not x% greater than A"; alternative = "B is X% greater than A"</li>
+</ul>
+<p>Taken together, <strong>the null and alternative hypothesis must account for all possibilities.</strong> The nature of the null hypothesis determines the structure of the hypothesis test.</p>
+<h2 id="one-way-vs-two-way-hypothesis-tests"><strong>One-Way vs Two-Way Hypothesis Tests</strong></h2>
+<p>Often in an A/B test, you are testing a new option (say, B) against an established default option (A), and the presumption is that you will stick with the default option unless the new option proves itself definitively better. In such a case, you want a hypothesis test to protect you from being fooled by chance in the direction favoring B. You don't care about being fooled by chance in the other direction, because you would be sticking with A unless B proves definitively better. So you want a <em>directional</em> alternative hypothesis (B is better than A). In such a case, you use a <strong><code>one-way or one-tail hypothesis test</code></strong>. This means that extreme chance results in only one direction count toward the <strong><code>p-value</code></strong>.</p>
+<p>If you want a hypothesis test to protect you from being fooled by chance in either direction, the alternative hypothesis is <em>bidirectional</em> (A is different from B; could be bigger or smaller). In such a case, you use a <strong><code>two-way or two-tail hypothesis test</code></strong>. This means that extreme chance results in either direction count toward the <strong><code>p-value</code></strong>.</p>
+<h2 id="permutation-test"><strong>Permutation Test</strong></h2>
+<p>In a Permutation procedure, two or more samples are involved, typically the groups in an A/B or other hypothesis test. <em>Permute</em> means to change the order of a set of values. The permutation procedure is as follows:</p>
+<ol>
+<li>Combine the results (of A/B test) from the different groups A and B (and if used, C, D, ..) in a single data set.</li>
+<li>Shuffle the combined data and then randomly draw (without replacement) a resample of the same size as group A (clearly it will contain some data from the other groups).</li>
+<li>From the remaining data, randomly draw (without replacement) a resample of the same size as group B.</li>
+<li>Do the same for groups C, D, and so on. You have now collected one set of resamples that mirror the sizes of the original samples.</li>
+<li>Whatever statistics or estimate was calculated for the original samples (e.g., difference in group proportions), calculate it now for the resamples and record; this constitutes one permutation iteration.</li>
+<li>Repeat the previous steps <span class="arithmatex">\(R\)</span> times to yield a permutation distribution of the test statistics.</li>
+</ol>
+<p>Now go back to the observation difference between groups and compare it to the set of permuted differences. If the observed difference lies well within the set of permuted differences, then we have not proven anything - the observed difference is within the range of what chance might produce. However, if the observed difference lies outside most of the permutation distribution, then we conclude that chance is <em>not</em> responsible. In technical term, the difference is <strong><code>statistical significant</code></strong>.</p>
+<p>There are two variants of the Permutation Test:</p>
+<ol>
+<li>An Exhaustive Permutation Test</li>
+<li>A Bootstrap Permutation Test</li>
+</ol>
+<p>We will look these topic later.</p>
 
 
 
