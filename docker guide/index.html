@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://data-science.imathlogic.com/docker%20guide/">
       
       
-        <link rel="prev" href="../statistical%20tests/">
+        <link rel="prev" href="../statistics/statistical-tests/">
       
       
       <link rel="icon" href="../assets/logo-4.png">
@@ -33,6 +33,14 @@
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256zm-40-176h24v-64h-24c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>');}</style>
+
 
     
     
@@ -51,6 +59,18 @@
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-N7Z66EQSKS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-N7Z66EQSKS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-N7Z66EQSKS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -65,7 +85,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber">
   
     
     
@@ -119,7 +139,19 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
           
         
       </form>
@@ -207,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../measures%20of%20central%20tendency/" class="md-tabs__link">
+      <a href="../statistics/measures-of-central-tendency/" class="md-tabs__link">
         Statistics
       </a>
     </li>
@@ -339,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../measures%20of%20central%20tendency/" class="md-nav__link">
+      <a href="../statistics/measures-of-central-tendency/" class="md-nav__link">
         Central Tendency
       </a>
     </li>
@@ -353,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../measures%20of%20dispersion/" class="md-nav__link">
+      <a href="../statistics/measures-of-dispersion/" class="md-nav__link">
         Measures of Dispersion
       </a>
     </li>
@@ -367,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization/" class="md-nav__link">
+      <a href="../statistics/visualization/" class="md-nav__link">
         Visualization
       </a>
     </li>
@@ -381,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sampling/" class="md-nav__link">
+      <a href="../statistics/sampling/" class="md-nav__link">
         Data Sampling
       </a>
     </li>
@@ -395,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distributions%20in%20statistics/" class="md-nav__link">
+      <a href="../statistics/distributions-in-statistics/" class="md-nav__link">
         Distributions
       </a>
     </li>
@@ -409,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statistical%20tests/" class="md-nav__link">
+      <a href="../statistics/statistical-tests/" class="md-nav__link">
         Statistical Testing
       </a>
     </li>
@@ -783,38 +815,38 @@
 <p>You can find the images from <a href="https://hub.docker.com/search" target="_blank">Docker Hub</a>.</p>
 <h2 id="reference-of-docker-some-important-commands"><a href="https://docs.docker.com/reference" target="_blank">Reference of Docker | Some Important Commands</a></h2>
 <h3 id="check-the-version"><a href="https://docs.docker.com/engine/reference/commandline/version" target="_blank">Check the version</a>:</h3>
-<p>There are 2 commands that can help to check the docker version</p>
-<pre><code class="language-bash">docker version
-</code></pre>
-<p>or</p>
-<pre><code class="language-bash">docker -v
-</code></pre>
+<p>There are 2 commands that can help to check the docker version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>version
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>-v
+</code></pre></div></p>
 <h3 id="docker-pull"><a href="https://docs.docker.com/engine/reference/commandline/pull" target="_blank"><code>docker pull</code></a>:</h3>
 <p>Pull an image or a repository from a registry/docker hub. Like to use <a href="https://hub.docker.com/_/postgres">postgres</a>, you have to pull that image first by the below command:</p>
-<pre><code class="language-bash">docker pull postgres
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>postgres
+</code></pre></div>
 <p>When you don't mention the tag, this command will pull the latest image. If you want to pull postgres image version 14, then the command will be</p>
-<pre><code class="language-bash">docker pull postgres:14
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>postgres:14
+</code></pre></div>
 <p><em>Note: <code>:14</code> is called <code>tag</code>.</em></p>
 <h3 id="docker-image"><a href="https://docs.docker.com/engine/reference/commandline/image" target="_blank"><code>docker image</code></a>:</h3>
 <ul>
-<li>Using this command, you can see list of images are there in your local machine. This command gives you some information about the docker images.</li>
+<li>Using this command, you can see list of images are there in your local machine. This command gives you some information about the docker images.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>image<span class="w"> </span>ls
+</code></pre></div></li>
 </ul>
-<pre><code class="language-bash">docker image ls
-</code></pre>
 <h3 id="docker-ps"><a href="https://docs.docker.com/engine/reference/commandline/ps" target="_blank"><code>docker ps</code></a>:</h3>
-<p>Same as <code>docker image</code> command, this command helps to work with containers. For example, to list down all the containers of your local machine, this below command is used.</p>
-<pre><code class="language-bash">docker ps
-</code></pre>
+<p>Same as <code>docker image</code> command, this command helps to work with containers. For example, to list down all the containers of your local machine, this below command is used.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>ps
+</code></pre></div></p>
 <h3 id="docker-run"><a href="https://docs.docker.com/engine/reference/commandline/run" target="_blank"><code>docker run</code></a>:</h3>
 <p>One of the most used command in docker family. It helps to run the image that you have pulled or have created to your local machine. E.g.,</p>
-<pre><code class="language-bash">docker run postgres
-</code></pre>
-<p>or</p>
-<pre><code class="language-bash">docker run postgres:13.8
-</code></pre>
-<p>The above command will run the <code>latest postgres image</code>. <em>postgres</em> is the image name. If you want to run a specific version of the image, you have to specify as so called <em><code>tag</code></em>.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>postgres
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span>postgres:13.8
+</code></pre></div>
+The above command will run the <code>latest postgres image</code>. <em>postgres</em> is the image name. If you want to run a specific version of the image, you have to specify as so called <em><code>tag</code></em>.</p>
 <p><strong>Important options:</strong>
 - <strong><code>-it</code></strong>: This instructs docker to allocate a pseudo.TTY connected to the container's stdin; creating an interactive <em>bash</em> shell in the container.
 - <strong><code>-e ENVIRONMENT_VAR=VALUE</code></strong>: Some images need environment variables which help to run the image properly. E.g., to run postgres properly, you have to set password by <code>POSTGRES_PASSWORD=mysecretpassword</code>.
@@ -824,106 +856,108 @@
 - - <strong><code>--net network-name</code></strong>: Connect the container to a network. This can help to connect other containers with this containers easily. Otherwise different networks can't connect each other.</p>
 <h3 id="docker-stop-or-docker-container-stop"><a href="https://docs.docker.com/engine/reference/commandline/stop" target="_blank"><code>docker stop</code></a> or <a href="https://docs.docker.com/engine/reference/commandline/container_stop" target="_blank"><code>docker container stop</code></a>:</h3>
 <p>Stop one or more running containers.</p>
-<pre><code class="language-bash">docker stop container_name
-or
-docker stop container_id
-or
-docker container stop container_name
-or
-docker container stop container_id
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>stop<span class="w"> </span>container_name
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>or
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>docker<span class="w"> </span>stop<span class="w"> </span>container_id
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>or
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>docker<span class="w"> </span>container<span class="w"> </span>stop<span class="w"> </span>container_name
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>or
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>docker<span class="w"> </span>container<span class="w"> </span>stop<span class="w"> </span>container_id
+</code></pre></div>
 <h3 id="docker-container-ls"><a href="https://docs.docker.com/engine/reference/commandline/container_ls" target="_blank"><code>docker container ls</code></a>:</h3>
 <p>An alternative of the command <code>docker ps</code> to list out all the active docker containers.</p>
-<pre><code class="language-bash">docker container ls
-</code></pre>
-<p>If you want all the containers whatever it is running or not, command this:</p>
-<pre><code class="language-bash">docker container ls -a
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>container<span class="w"> </span>ls
+</code></pre></div>
+<p>If you want all the containers whatever it is running or not, command this:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>container<span class="w"> </span>ls<span class="w"> </span>-a
+</code></pre></div></p>
 <h3 id="docker-container-prune"><a href="https://docs.docker.com/engine/reference/commandline/container_prune/" target="_blank"><code>docker container prune</code></a>:</h3>
 <p>Remove all the stopped containers from your local machine. This is a very <strong>dangerous command.</strong> You have to be very careful when you are using it. Though it does remove the stopped containers but does not remove the volumes associated with the containers.</p>
-<pre><code class="language-bash">docker container prune
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>container<span class="w"> </span>prune
+</code></pre></div>
 <h3 id="docker-logs"><a href="https://docs.docker.com/engine/reference/commandline/logs" target="_blank"><code>docker logs</code></a>:</h3>
 <p>You can see the logs of the containers. It helps to get inside what is executing in containers.</p>
-<pre><code class="language-bash">docker logs container_name
-or
-docker logs container_id
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>container_name
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>or
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>docker<span class="w"> </span>logs<span class="w"> </span>container_id
+</code></pre></div>
 <h2 id="docker-example">Docker Example:</h2>
 <h3 id="connect-docker-mongo-express-with-mongodb-docker-compose">Connect docker <a href="https://hub.docker.com/_/mongo-express" target="_blank">mongo-express</a> with <a href="https://hub.docker.com/_/mongo" target="_blank">mongodb</a> | <a href="https://docs.docker.com/compose/reference" target="_blank">Docker Compose</a>:</h3>
 <p><a href="https://hub.docker.com/_/mongo" target="_blank">MongoDB</a> is the database and the <a href="https://hub.docker.com/_/mongo-express" target="_blank">MongoDB-Express</a> is the Web-based MongoDB admin interface, written with Node.js and express. So, we will start the container first of the MongoDB and then also start the MongoDB-Express container by connecting with the MongoDB network.</p>
-<p>Create a network that both containers will connect together.</p>
-<pre><code class="language-bash">docker network create mongo-network
-</code></pre>
-<p>Start the MongoDB container:</p>
-<pre><code class="language-bash">docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network -d mongo
-</code></pre>
-<p>Now start the MongoDB-Express container:</p>
-<pre><code class="language-bash">docker run --network mongo-network -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -p 8081:8081 -d --name mongo-express mongo-express
-</code></pre>
-<p>Now the web app of mongodb-express container is running and you can visit by using the browser. The url is http://localhost:8081. You can visit it. If we stop the <code>mongodb</code> container that we have created, it will also stop the <code>mongo-express</code> container because <code>mongodb</code> container is the dependency of the <code>mongo-express</code> container.</p>
+<p>Create a network that both containers will connect together.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mongo-network
+</code></pre></div></p>
+<p>Start the MongoDB container:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_USERNAME</span><span class="o">=</span>admin<span class="w"> </span>-e<span class="w"> </span><span class="nv">MONGO_INITDB_ROOT_PASSWORD</span><span class="o">=</span>password<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>--net<span class="w"> </span>mongo-network<span class="w"> </span>-d<span class="w"> </span>mongo
+</code></pre></div></p>
+<p>Now start the MongoDB-Express container:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--network<span class="w"> </span>mongo-network<span class="w"> </span>-e<span class="w"> </span><span class="nv">ME_CONFIG_MONGODB_SERVER</span><span class="o">=</span>mongodb<span class="w"> </span>-e<span class="w"> </span><span class="nv">ME_CONFIG_MONGODB_ADMINUSERNAME</span><span class="o">=</span>admin<span class="w"> </span>-e<span class="w"> </span><span class="nv">ME_CONFIG_MONGODB_ADMINPASSWORD</span><span class="o">=</span>password<span class="w"> </span>-p<span class="w"> </span><span class="m">8081</span>:8081<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mongo-express<span class="w"> </span>mongo-express
+</code></pre></div>
+Now the web app of mongodb-express container is running and you can visit by using the browser. The url is http://localhost:8081. You can visit it. If we stop the <code>mongodb</code> container that we have created, it will also stop the <code>mongo-express</code> container because <code>mongodb</code> container is the dependency of the <code>mongo-express</code> container.</p>
 <p>So, we have wrote lots of long commands to do this. This can cause issue if you have done a small spelling mistake. To solve this issue, <a href="https://docs.docker.com/compose/reference" target="_blank"><code>docker compose</code></a> come out. For this you can create a yml file. The file name can be anything. For our case, we can name it as <em>docker-compose.yml</em>.</p>
-<pre><code class="language-yml">version: '3'
-services:
-    mongodb:
-        image: mongo
-        ports:
-            - &quot;27017:27017&quot;
-        environment:
-            - MONGO_INITDB_ROOT_USERNAME=admin
-            - MONGO_INITDB_ROOT_PASSWORD=password
-        volumes:
-            - mymongo-data:/data/db
-    mongo-express:
-        image: mongo-express
-        restart: always
-        ports:
-            - &quot;8081:8081&quot;
-        environment:
-            - ME_CONFIG_MONGODB_SERVER=mongodb
-            - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
-            - ME_CONFIG_MONGODB_ADMINPASSWORD=password
-volumes:
-    mymongo-data:
-        driver: local
-</code></pre>
-<p>After creating the compose yml file, you can run the file by the following command:</p>
-<pre><code class="language-bash">docker-compose -f docker-compose.yml up
-</code></pre>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nt">mongodb</span><span class="p">:</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;27017:27017&quot;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">        </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGO_INITDB_ROOT_USERNAME=admin</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGO_INITDB_ROOT_PASSWORD=password</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mymongo-data:/data/db</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nt">mongo-express</span><span class="p">:</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo-express</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8081:8081&quot;</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">        </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ME_CONFIG_MONGODB_SERVER=mongodb</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ME_CONFIG_MONGODB_ADMINUSERNAME=admin</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ME_CONFIG_MONGODB_ADMINPASSWORD=password</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">    </span><span class="nt">mymongo-data</span><span class="p">:</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">        </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+</code></pre></div>
+After creating the compose yml file, you can run the file by the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up
+</code></pre></div>
 <p>The best thing with docker compose is that it will create a network by-default and will put all the containers into it. We don't have to specify separately in the docker compose file. Check out the <code>mongodb</code> container. One option is <code>volumes</code>. That is different with the lowers <code>volumes</code> settings. The value of<code>volumes</code> of <code>mongodb</code> container should be default value of the mongo image. That can be different with MySQL or any other image. For that, you have to look to the documentation of the images. By using the <code>volumes</code>, you can detach and attach the volume(s) with the container according to the requirements.</p>
 <p>To stop this compose, you can run the command to a another terminal. This will also remove the containers from your local machine automatically. You don't have to do it manually.</p>
-<pre><code class="language-bash">docker-compose -f docker-compose.yml down
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>down
+</code></pre></div>
 <h3 id="flask-app-create-docker-image-push-image-to-docker-hub">Flask APP | Create Docker Image | Push Image to Docker Hub:</h3>
 <p>To create an docker image, you have to create a file named <code>Dockerfile</code> inside your root project directory. According to the demo-flask app, add the below commands to the <code>Dockerfile</code>.</p>
-<pre><code class="language-Dockerfile"># define the base image
-FROM python:3-alpine3.15
-# define the working directory
-WORKDIR /app
-# copy everything and move those to the directory
-COPY . /app
-# install the required python packages using pip
-RUN pip install -r requirements.txt
-# expose the port in which this application will run.
-# This is defined to the python flask file.
-EXPOSE 3000
-# Now start the application, the entry point of your app
-CMD python ./index.py
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c"># define the base image</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3-alpine3.15</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c"># define the working directory</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c"># copy everything and move those to the directory</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c"># install the required python packages using pip</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c"># expose the port in which this application will run.</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="c"># This is defined to the python flask file.</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">3000</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="c"># Now start the application, the entry point of your app</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="k">CMD</span><span class="w"> </span>python<span class="w"> </span>./index.py
+</code></pre></div>
 <p>Now to build the image of your flask app, you can run the below command. <code>sayanroy7</code> is the username of mine (to get your username, you have to create an account to <a href="https://hub.docker.com">docker hub</a>). <code>flask-docker-demo</code> is the image of the image that you are giving. <code>:0.0.1.RELEASE</code> is the <code>flag</code> of this image.</p>
-<pre><code class="language-bash">docker build -t sayanroy7/flask-docker-demo:0.0.1.RELEASE .
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>sayanroy7/flask-docker-demo:0.0.1.RELEASE<span class="w"> </span>.
+</code></pre></div>
 <p>After building the image, you can see it to your Docker Desktop app. Before pushing to the hub, check that is it working fine or not. For that, run the simple command:</p>
-<pre><code class="language-bash">docker container run -d -p 3000:3000 --name flask-docker-demo sayanroy7/flask-docker-demo:0.0.1.RELEASE
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>container<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>--name<span class="w"> </span>flask-docker-demo<span class="w"> </span>sayanroy7/flask-docker-demo:0.0.1.RELEASE
+</code></pre></div>
 <p>If you go to the browser and hit http://localhost:3000, you should get the result as</p>
-<pre><code class="language-bash">{&quot;message&quot;:&quot;Hey there Python&quot;}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">{</span><span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;Hey there Python&quot;</span><span class="o">}</span>
+</code></pre></div>
 <p>If the image is working fine, then push the image to the Docker Hub by the command. If you already signed in to your Docker Desktop, then the image will be uploaded smoothly otherwise it will prompt for the authentications.</p>
-<pre><code class="language-bash">docker push sayanroy7/flask-docker-demo:0.0.1.RELEASE 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span>push<span class="w"> </span>sayanroy7/flask-docker-demo:0.0.1.RELEASE<span class="w"> </span>
+</code></pre></div>
 <p>And in your Docker Hub, you can see the image under the <em>Repositories</em> tab!! </p>
 
+
+  
 
 
 
@@ -944,9 +978,15 @@ CMD python ./index.py
       
         <footer class="md-footer">
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - Sayan Roy
+    </div>
   
   
     Made with
@@ -955,6 +995,8 @@ CMD python ./index.py
     </a>
   
 </div>
+
+      <!-- social info -->
       
     </div>
   </div>

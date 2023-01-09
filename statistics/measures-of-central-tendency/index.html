@@ -12,15 +12,15 @@
         <meta name="author" content="Sayan Roy">
       
       
-        <link rel="canonical" href="https://data-science.imathlogic.com/measures%20of%20central%20tendency/">
+        <link rel="canonical" href="https://data-science.imathlogic.com/statistics/measures-of-central-tendency/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../measures%20of%20dispersion/">
+        <link rel="next" href="../measures-of-dispersion/">
       
-      <link rel="icon" href="../assets/logo-4.png">
+      <link rel="icon" href="../../assets/logo-4.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
@@ -29,12 +29,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256zm-40-176h24v-64h-24c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>');}</style>
+
 
     
     
@@ -48,11 +56,23 @@
       
     
     
-      <link rel="stylesheet" href="../styles/styles.css">
+      <link rel="stylesheet" href="../../styles/styles.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-N7Z66EQSKS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-N7Z66EQSKS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-N7Z66EQSKS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -67,7 +87,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber">
   
     
     
@@ -93,9 +113,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href="../.." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
-  <img src="../assets/logo-4.png" alt="logo">
+  <img src="../../assets/logo-4.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +141,19 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
           
         
       </form>
@@ -194,7 +226,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -227,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../docker%20guide/" class="md-tabs__link">
+      <a href="../../docker%20guide/" class="md-tabs__link">
         MLOps
       </a>
     </li>
@@ -255,9 +287,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href="../.." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
-  <img src="../assets/logo-4.png" alt="logo">
+  <img src="../../assets/logo-4.png" alt="logo">
 
     </a>
     Data-Science | iMathLogic
@@ -285,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -453,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../measures%20of%20dispersion/" class="md-nav__link">
+      <a href="../measures-of-dispersion/" class="md-nav__link">
         Measures of Dispersion
       </a>
     </li>
@@ -495,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distributions%20in%20statistics/" class="md-nav__link">
+      <a href="../distributions-in-statistics/" class="md-nav__link">
         Distributions
       </a>
     </li>
@@ -509,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../statistical%20tests/" class="md-nav__link">
+      <a href="../statistical-tests/" class="md-nav__link">
         Statistical Testing
       </a>
     </li>
@@ -562,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker%20guide/" class="md-nav__link">
+      <a href="../../docker%20guide/" class="md-nav__link">
         Docker Guide
       </a>
     </li>
@@ -702,30 +734,30 @@
 <h2 id="measures-of-central-tendency_1"><strong>Measures of Central Tendency</strong></h2>
 <h3 id="mean"><strong>Mean</strong></h3>
 <div class="arithmatex">\[\large \bar{x} = \frac{\sum_{i=1}^{n}{x_i}}{n}\]</div>
-<pre><code class="language-python">DataFrame.mean()
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
 <h3 id="trimmed-mean"><strong>Trimmed Mean</strong></h3>
 <p>A variation of the mean is a trimmed mean which you calculate by dropping a fixed number of sorted values at each end and then taking an average of the remaining values.</p>
 <p>The formula to compute the trimmed mean with <span class="arithmatex">\(p\)</span> smallest and largest values omitted is:
 <span class="arithmatex">\(<span class="arithmatex">\(\large \bar{x} = \frac{\sum_{i = p+1}^{n-p}{x_i}}{n - 2p}\)</span>\)</span></p>
-<pre><code class="language-python">import scipy.stats as stats
-
-# 0.1 means drop 10% from each end.
-stats.trim_mean(column_name, 0.1)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># 0.1 means drop 10% from each end.</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">stats</span><span class="o">.</span><span class="n">trim_mean</span><span class="p">(</span><span class="n">column_name</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="weighted-mean"><strong>Weighted Mean</strong></h3>
 <div class="arithmatex">\[\large \bar{x_w} = \frac{\sum_{i=1}^{n}{w_ix_i}}{\sum_{i=1}^{n}{w_i}}\]</div>
-<pre><code class="language-python">import numpy as np
-
-np.average(DataFrame.column, weights=DataFrame.another_column)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">column</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">another_column</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="median"><strong>Median</strong></h3>
 <p>Compared to mean, which uses all the observations, the median depends only on the values in the center of the sorted data. It is also possible to compute the <em>weighted median</em>.</p>
-<pre><code class="language-python">DataFrame.median()
-</code></pre>
-<p>For weighted median, you can use the specialized package <code>wquantiles</code>.</p>
-<pre><code class="language-python">wquantiles.median(DataFrame.column, weights=DataFrame.another_column)
-</code></pre>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</code></pre></div>
+For weighted median, you can use the specialized package <code>wquantiles</code>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">wquantiles</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">column</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">another_column</span><span class="p">)</span>
+</code></pre></div></p>
 <h3 id="mode"><strong>Mode</strong></h3>
 <p>The mode is the value - or values in case of a tie - that appears most often in the data. The mode is a simple summary statistics for categorical data, and it is generally not used for numeric data.</p>
 <h3 id="expected-value"><strong>Expected Value</strong></h3>
@@ -733,6 +765,8 @@ np.average(DataFrame.column, weights=DataFrame.another_column)
 <div class="arithmatex">\[\large EV = 0.05 * 300 + 0.15 * 50 + 0.80 * 0 = 22.5\]</div>
 <p>In that cloud service example, the expected value of a webinar attendee is thus $22.50 per month.</p>
 
+
+  
 
 
 
@@ -753,9 +787,15 @@ np.average(DataFrame.column, weights=DataFrame.another_column)
       
         <footer class="md-footer">
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - Sayan Roy
+    </div>
   
   
     Made with
@@ -764,6 +804,8 @@ np.average(DataFrame.column, weights=DataFrame.another_column)
     </a>
   
 </div>
+
+      <!-- social info -->
       
     </div>
   </div>
@@ -774,14 +816,14 @@ np.average(DataFrame.column, weights=DataFrame.another_column)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
       
-        <script src="../javascript/mathjax.js"></script>
+        <script src="../../javascript/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
