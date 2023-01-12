@@ -2,47 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://data-science.imathlogic.com/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://data-science.imathlogic.com/docker%20guide/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <loc>https://data-science.imathlogic.com/MLOps/</loc>
+         <lastmod>2023-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/MLOps/docker-guide/</loc>
+         <lastmod>2023-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/MLOps/deployment/common-deployment-cases/</loc>
+         <lastmod>2023-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/MLOps/deployment/key-challenges/</loc>
+         <lastmod>2023-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://data-science.imathlogic.com/MLOps/deployment/model-drift/</loc>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/distributions-in-statistics/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/measures-of-central-tendency/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/measures-of-dispersion/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/sampling/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/statistical-tests/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://data-science.imathlogic.com/statistics/visualization/</loc>
-         <lastmod>2023-01-09</lastmod>
+         <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
