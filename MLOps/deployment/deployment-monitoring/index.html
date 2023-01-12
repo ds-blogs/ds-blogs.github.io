@@ -1,4 +1,4 @@
-<!-- Custom HTML site displayed as the Home chapter -->
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -12,25 +12,25 @@
         <meta name="author" content="Sayan Roy">
       
       
-        <link rel="canonical" href="https://data-science.imathlogic.com/">
+        <link rel="canonical" href="https://data-science.imathlogic.com/MLOps/deployment/deployment-monitoring/">
       
       
+        <link rel="prev" href="../common-deployment-cases/">
       
-        <link rel="next" href="statistics/measures-of-central-tendency/">
       
-      <link rel="icon" href="assets/logo-4.png">
+      <link rel="icon" href="../../../assets/logo-4.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
-        <title>Data-Science | iMathLogic - Data-Science | iMathLogic</title>
+        <title>Monitoring Dashboard - Data-Science | iMathLogic</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6b71719e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b71719e.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
   
@@ -54,9 +54,9 @@
       
     
     
-      <link rel="stylesheet" href="styles/styles.css">
+      <link rel="stylesheet" href="../../../styles/styles.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -96,6 +96,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#deployment-monitoring" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,9 +111,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href="../../.." title="Data-Science | iMathLogic" class="md-header__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
-  <img src="assets/logo-4.png" alt="logo">
+  <img src="../../../assets/logo-4.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data-Science | iMathLogic
+              Monitoring Dashboard
             
           </span>
         </div>
@@ -206,7 +211,6 @@
     <div class="md-container" data-md-component="container">
       
       
-
         
           
             
@@ -217,12 +221,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -237,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="statistics/measures-of-central-tendency/" class="md-tabs__link">
+      <a href="../../../statistics/measures-of-central-tendency/" class="md-tabs__link">
         Statistics
       </a>
     </li>
@@ -247,13 +249,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="MLOps/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         MLOps
       </a>
     </li>
@@ -266,289 +270,6 @@
           
         
       
-<style>
-
-    .md-main {
-        flex-grow: 0;
-        height: 0px;
-    }
-
-    .md-main__inner {
-        display: flex;
-        height: 100%;
-    }
-
-    .tx-container {
-        padding-top: .0rem;
-        min-height: 80vh;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg,47%,55%,1) 99%,#fff 99%);
-    }
-
-    .tx-hero {
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        justify-content: center;
-    }
-
-    .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700
-    }
-
-    .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: 0 auto;
-    }
-
-    .tx-hero__image{
-        width:27rem;
-        height:17rem;
-        order:1;
-        padding-right: 2.5rem;
-    }
-
-    .tx-hero__image img{
-        width: 50rem;
-        height: 17rem;
-    }
-
-    .tx-hero .md-button {
-        margin-top: .5rem;
-        margin-right: .5rem;
-        color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button--primary {
-        background-color: var(--md-primary-bg-color);
-        color: hsla(280deg, 37%, 48%, 1);
-        border-color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button:focus,
-    .tx-hero .md-button:hover {
-        background-color: var(--md-accent-fg-color);
-        color: var(--md-default-bg-color);
-        border-color: var(--md-accent-fg-color)
-    }
-
-    .feature-item h2 svg {
-        height: 30px;
-        float: left;
-        margin-right: 10px;
-        transform: translateY(10%);
-    }
-
-    .top-hr {
-        margin-top: 42px;
-    }
-
-    .feature-item {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        box-sizing: border-box;
-        padding: 0 15px;
-        word-break: break-word
-    }
-
-    .feature-item h2 {
-        color: #333;
-        font-weight: 300;
-        font-size: 25px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: normal;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: inherit;
-    }
-
-    .feature-item p {
-        font-size: 16px;
-        line-height: 1.8em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        color: #111;
-        margin: 0 0 10px;
-        display: block;
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.4rem
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 3.5rem;
-            margin-bottom: 3.5rem;
-            margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-
-        .top-hr {
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .bottom-hr {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .feature-item {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .feature-item:hover {
-            background-color: #526cfe47;
-            border-radius: 3px;
-        }
-    }
-
-    .hr {
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .text-center {
-        text-align: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15px;
-        font-family: 'Lato', sans-serif;
-        font-size: 23px;
-        font-weight: 300;
-        padding-bottom: 10px;
-    }
-
-    .logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row wrap;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        flex: 1 1 auto;
-        padding: 25px;
-        max-height: 130px;
-        vertical-align: middle;
-    }
-
-    .hr-logos {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    /* .md-footer-meta__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
-    }
-
-    .md-footer-social {
-        padding-top: 20px;
-    } */
-</style>
-
-<!-- Main site Entry button descriptions -->
-<section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-        <div class="tx-hero__image">
-          <img src="assets/data-science1.png" draggable="false">
-        </div>
-        <div class="tx-hero__content">
-          <h1>Data-Science Fun Club</h1>
-          <p>Access detailed concepts that every <b>Data Scientists</b> need. From <b>Statistics</b> to different <b>Classical ML algorithms</b>, <b>MLOps</b> to <b>SQL</b></b></p>
-          <a href="statistics/measures-of-central-tendency/" title="Central Tendency" class="md-button md-button--primary">
-            Get started
-          </a>
-          <a href="https://github.com/Sayan-Roy-729/Data-Science" title="" class="md-button" target="_blank">
-            Go to GitHub
-            <span class="twemoji">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> 
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-</section>
-
-<!-- Main site box descriptions -->
-<!-- <div class="top-hr">
-    <div class="feature-item">
-        <h2>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M15 17v-3h3v-2l4 3.5-4 3.5v-2h-3m2 1v3h-3v2l-4-3.5 4-3.5v2h3M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m9.66-5.27l-2-3.46c-.12-.22-.38-.31-.61-.22l-2.49 1c-.51-.41-1.06-.74-1.69-1l-.37-2.63A.506.506 0 0014 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.26-1.17.59-1.69 1L5 5.05c-.23-.09-.5 0-.61.22l-2 3.46c-.13.21-.08.49.11.64L4.57 11l-.07 1 .07 1-2.11 1.63c-.2.15-.25.43-.12.64l2 3.46c.11.27.4.38.66.27l2.5-1c.24.19.5.37.76.53l1.65-1.4c-.77-.33-1.45-.82-2-1.45l-2.41 1-.77-1.3L6.8 13.8a5.55 5.55 0 010-3.6L4.69 8.65l.75-1.3 2.41 1c.78-.9 1.83-1.53 3-1.78l.4-2.57h1.5l.37 2.62c1.17.24 2.22.88 3 1.77l2.41-1 .75 1.3-2.08 1.51c.09.26.16.53.2.8h2l2.1-1.63a.48.48 0 00.16-.64M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m0-6c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2z" />
-            </svg>
-            UP42 in Python
-        </h2>
-        <p>Use UP42 via Python! Order geospatial data, run analytic workflows and
-            generate insights!</p>
-    </div>
-    <div class="feature-item">
-        <h2>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M16 17v2H2v-2s0-4 7-4 7 4 7 4m-3.5-9.5A3.5 3.5 0 109 11a3.5 3.5 0 003.5-3.5m3.44 5.5A5.32 5.32 0 0118 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 00-1.93.59 5 5 0 010 5.82A3.39 3.39 0 0015 11a3.5 3.5 0 000-7z" />
-            </svg>Python ecosystem
-        </h2>
-        <p>Use UP42 together with your preferred Python libraries! For data science, building apps etc. </p>
-    </div>
-    <div class="feature-item">
-        <h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
-            Visualizations
-        </h2>
-        <p>Interactive maps & visualizations. Ideal to use with Jupyter notebooks.</p>
-    </div>
-</div> -->
-
-<!-- <div class="top-hr">
-    <div class="hr">
-    </div>
-</div> -->
-
-
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -564,9 +285,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
+    <a href="../../.." title="Data-Science | iMathLogic" class="md-nav__button md-logo" aria-label="Data-Science | iMathLogic" data-md-component="logo">
       
-  <img src="assets/logo-4.png" alt="logo">
+  <img src="../../../assets/logo-4.png" alt="logo">
 
     </a>
     Data-Science | iMathLogic
@@ -592,19 +313,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -658,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/measures-of-central-tendency/" class="md-nav__link">
+      <a href="../../../statistics/measures-of-central-tendency/" class="md-nav__link">
         Central Tendency
       </a>
     </li>
@@ -672,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/measures-of-dispersion/" class="md-nav__link">
+      <a href="../../../statistics/measures-of-dispersion/" class="md-nav__link">
         Measures of Dispersion
       </a>
     </li>
@@ -686,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/visualization/" class="md-nav__link">
+      <a href="../../../statistics/visualization/" class="md-nav__link">
         Visualization
       </a>
     </li>
@@ -700,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/sampling/" class="md-nav__link">
+      <a href="../../../statistics/sampling/" class="md-nav__link">
         Data Sampling
       </a>
     </li>
@@ -714,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/distributions-in-statistics/" class="md-nav__link">
+      <a href="../../../statistics/distributions-in-statistics/" class="md-nav__link">
         Distributions
       </a>
     </li>
@@ -728,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistics/statistical-tests/" class="md-nav__link">
+      <a href="../../../statistics/statistical-tests/" class="md-nav__link">
         Statistical Testing
       </a>
     </li>
@@ -748,14 +461,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
         
@@ -772,7 +487,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="MLOps/">MLOps</a>
+          <a href="../../">MLOps</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -795,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MLOps/docker-guide/" class="md-nav__link">
+      <a href="../../docker-guide/" class="md-nav__link">
         Docker Guide
       </a>
     </li>
@@ -807,14 +522,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
       
       
         
@@ -828,7 +545,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="true">
           Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -846,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MLOps/deployment/model-drift/" class="md-nav__link">
+      <a href="../model-drift/" class="md-nav__link">
         Model Drift
       </a>
     </li>
@@ -860,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MLOps/deployment/key-challenges/" class="md-nav__link">
+      <a href="../key-challenges/" class="md-nav__link">
         Key challenges
       </a>
     </li>
@@ -874,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MLOps/deployment/common-deployment-cases/" class="md-nav__link">
+      <a href="../common-deployment-cases/" class="md-nav__link">
         Common Deployment Cases
       </a>
     </li>
@@ -886,11 +603,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="MLOps/deployment/deployment-monitoring/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Monitoring Dashboard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Monitoring Dashboard
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-dashboard" class="md-nav__link">
+    Monitoring dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-metrics" class="md-nav__link">
+    Software metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-metrics" class="md-nav__link">
+    Input metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-metrics" class="md-nav__link">
+    Output metrics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-you-do" class="md-nav__link">
+    What should you do?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -926,6 +718,57 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-dashboard" class="md-nav__link">
+    Monitoring dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-metrics" class="md-nav__link">
+    Software metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-metrics" class="md-nav__link">
+    Input metrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-metrics" class="md-nav__link">
+    Output metrics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-you-do" class="md-nav__link">
+    What should you do?
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -936,6 +779,72 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="deployment-monitoring"><b>Deployment Monitoring</b></h1>
+<h2 id="monitoring-dashboard"><strong>Monitoring dashboard</strong></h2>
+<p><center>
+<img alt="Monitoring dashboard" src="../../../assets/MLOps/monitoring-dashboard.png" />
+</center></p>
+<p>The most common way to monitor a machine learning system is to use a dashboard to track how it is doing over time. Depending on your application, your dashboards may monitor different metrics. For example, you may have one dashboard to monitor the server load, or a different dashboards to monitor diffraction of non-null outputs. Sometimes a speech recognition system output is null when the things that users didn't say anything. If this changes dramatically over time, it may be an indication that something is wrong, or one common one I've seen for a lot of structured data task is monitoring the fraction of missing input values. If that changes, it may mean that something has changed about your data.</p>
+<p>When you're trying to decide what to monitor, the recommendation is that you sit down with your team and brainstorm all the things that could possibly go wrong. Then you want to know about if something does go wrong. For all the things that could go wrong, brainstorm a few statistics or a few metrics that will detect that problem. For example, if you're worried about user traffic spiking, causing the service to become overloaded, then server loads maybe one metric, you could track and so on for the other examples here.</p>
+<p>When you will design the monitoring dashboards for the first time, you have to think it's okay to start off with a lot of different metrics and monitor a relatively large set and then gradually remove the ones that you find over time not to be particularly useful. Here are some examples of metrics our views or I've seen others use on a variety of projects.</p>
+<h3 id="software-metrics">Software metrics</h3>
+<p>First are the software metrics, such as <em>memory, compute, latency, throughput, server load</em>, things that help you monitor the health of your software implementation of the prediction service or other pieces of software around your learning algorithm. But these software metrics will help you make sure that your software is running well. Many MLOps tools will come over the bouts already tracking these software metrics. In addition to the software metrics, you should often choose other metrics that help monitor the statistical health or the performance of the learning algorithm. Broadly, there are two types of metrics you might brainstorm around.</p>
+<h3 id="input-metrics">Input metrics</h3>
+<p>Input metrics, which are metrics that measure has your input distribution x change. For example, if you are building a speech recognition system, you might monitor the average input length in seconds of the length for the audio clip fed to your system. You might monitor the average input volume. If these change for some reason, that might be something you'll once to take a look at just to make sure this hasn't hurt the performance of your algorithm. Number or percentage of missing values is a very common metric. When using structured data, some of which may have missing values, or for the manufacturing visual inspection example, you might monitor average image brightness if you think that lighting conditions could change, and you want to make sure you know if it does, so you can brainstorm different metrics to see if your input distribution x might have changed.</p>
+<h3 id="output-metrics">Output metrics</h3>
+<p>A second set of metrics that help you understand if your learning algorithm is performing well are output metrics. Such as, how often does your speech recognition system return null, the empty string, because the things the user doesn't say anything, or if you have built a speech recognition system for web search using voice, you might decide to see how often does the user do two very quick searches in a row with substantially the same input. That might be a sign that you misrecognize their query the first time round. It's an imperfect signal but you could try this metric and see if it helps. Or you could monitor the number of times the user first try to use the speech system and then switches over to typing, that could be a sign that the user got frustrated or gave up on your speech system and could indicate degrading performance. Of course, for web search, you would also use maybe very course metrics like
+click-through rate or CTR, just to make sure that the overall system is healthy. These output metrics can help you figure out if either your learning algorithm, output y has changed in some way, or if something that comes even after your learning algorithms output, such as the user's switching over to typing has changed in some significant way.</p>
+<h2 id="what-should-you-do"><strong>What should you do?</strong></h2>
+<p><center>
+<pre class="mermaid"><code>flowchart LR
+    %% Colors %%
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff
+
+    P(ML model/data) ====&gt; E(Experiment)
+    E ====&gt; EA(Error analysis)
+    EA ====&gt; P
+</code></pre>
+</center></p>
+<p>Because input and output metrics are application specific, most MLOps tools will need to be configured specifically to track the input and output metrics for your application. You may already know that machine learning modeling is a highly iterative process, so as deployment. Take modeling, you would come up with a machine learning model and some data, train the model, that's an experiment. Then do error analysis and use the error analysis to go back to figure out how to improve the model or your data and is by iterating through this loop multiple times that you then hopefully gets a good model.</p>
+<p><center>
+<pre class="mermaid"><code>flowchart LR
+    %% Colors %%
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff
+
+    D(Deployment/Monitoring) ====&gt; T(Traffic)
+    T ====&gt; PA(Performance analysis)
+    PA ====&gt; D
+</code></pre>
+</center></p>
+<p>When you get your first deployments up and running and put in place a set of monitoring dashboards. But that's only the start
+of this iterative process. A running system allows you to get real user data or real traffic. It is by seeing how your learning algorithm performs on real data on real traffic that, that allows you to do performance analysis, and this in turn helps you to update your deployment and to keep on monitoring your system.</p>
+<p>It usually takes a few tries to converge to the right set of metrics to monitor. Sometimes have deploy the machine learning system, and it's not uncommon for you to deploy machine learning system with an initial set of metrics only to run the system for a few weeks and then to realize that something could go wrong with it that you hadn't thought of before and into pick a new metric to monitor. Or for you to have some metric that you monitor for a few weeks and then decide they're just metric, hardly ever changes in does is inducible, and to get rid of that metric in favor of focusing attention on something else.</p>
+<p><center>
+<img alt="Monitoring dashboard" src="../../../assets/MLOps/monitoring-dashboard.png" />
+</center></p>
+<p>After you've chosen a set of metrics to monitor, common practice would be to set thresholds for alarms. You may decide based on this set, if the server load ever goes above 0.91, that may trigger an alarm or a notification to let you know or let the team know to see if there's a problem and maybe spin up some more servers. Or if the fashion of non-null plus goals above or beyond certain thresholds that might trigger an alarm. Or if they're not, fraction of missing values goes above or below some set of thresholds, maybe that should trigger an alarm, and it is okay if you adapt the metrics and the thresholds over time to make sure that they are flagging to you the most relevant cases of concern. If something goes wrong with your learning algorithm, if is a software issue such as server load is too high, then that may require changing the software implementation, or if it is a performance problem associated with the accuracy of the learning algorithm, then you may need to update your model. Or if it is an issue associated with the accuracy of
+the learning algorithm, then you may need to go back to fix that that's why many machine learning models will need a little bit of maintenance or retraining over time.</p>
+<p><center>
+<img alt="Monitoring dashboard" src="../../../assets/MLOps/machine-learning-life-cycle.png" />
+</center></p>
+<p>Just like almost all software needs some level of maintenance as well. When a model needs to be updated, you can either retrain it manually, where in Engineer, maybe you will retrain the model perform error analysis and the new model and make sure it looks okay before you push that to deployment. Or you could also put in place a system where there is automatic retraining.</p>
+
+
+  
+
+
+
+
                 
               </article>
             </div>
@@ -950,19 +859,45 @@
         
       </main>
       
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; 2023 - Sayan Roy
+                </div>
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.prune", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
       
-        <script src="javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://data-science.imathlogic.com/MLOps/deployment/deployment-monitoring/</loc>
+         <lastmod>2023-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://data-science.imathlogic.com/MLOps/deployment/key-challenges/</loc>
          <lastmod>2023-01-12</lastmod>
          <changefreq>daily</changefreq>
